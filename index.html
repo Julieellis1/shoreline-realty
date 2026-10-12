@@ -259,6 +259,54 @@ main { display: block; }
 .x-foot__base { max-width: var(--max); margin: 0 auto; padding: 22px var(--pad) 30px; border-top: 1px solid rgba(241,235,220,0.18); display: flex; gap: 18px; flex-wrap: wrap; justify-content: space-between; font-size: 0.82rem; color: rgba(241,235,220,0.6); }
 .x-foot__base a { color: var(--secondary); }
 
+/* subpage enrichment: banners, splits, faq, quotes, monograms */
+.x-pbanner { background: var(--primary-deep); color: var(--cream); padding: clamp(64px, 8vw, 110px) 0; overflow: hidden; }
+.x-pbanner__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(30px, 5vw, 70px); align-items: center; }
+.x-pbanner .x-eyebrow { color: var(--secondary); }
+.x-pbanner h1 { color: #fff; font-size: clamp(2.2rem, 5.2vw, 3.9rem); margin-bottom: 18px; }
+.x-pbanner h1 em { font-style: normal; color: var(--secondary); }
+.x-pbanner .x-lead { color: rgba(241,235,220,0.84); }
+.x-pbanner__img { border-radius: 22px; overflow: hidden; box-shadow: 0 30px 70px rgba(0,0,0,0.35); }
+.x-pbanner__img img { width: 100%; aspect-ratio: 4/3.4; object-fit: cover; }
+.x-split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 5vw, 70px); align-items: center; padding: 34px 0; }
+.x-split + .x-split { border-top: 1px solid var(--border); }
+.x-split__img { border-radius: 20px; overflow: hidden; }
+.x-split__img img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.x-split--rev .x-split__img { order: 2; }
+.x-split h3 { font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 14px; }
+.x-split p { color: var(--muted); }
+.x-split p + p { margin-top: 12px; }
+.x-num { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 100px; background: var(--primary); color: var(--secondary); font-weight: 800; font-size: 1rem; margin-bottom: 16px; }
+.x-quote { background: var(--primary); color: var(--cream); border-radius: 24px; padding: clamp(36px, 5vw, 64px); margin-top: 64px; position: relative; overflow: hidden; }
+.x-quote::before { content: "\201C"; position: absolute; top: 6px; left: 30px; font-size: 6rem; color: var(--secondary); opacity: 0.35; line-height: 1; }
+.x-quote blockquote { position: relative; font-size: clamp(1.08rem, 2vw, 1.42rem); line-height: 1.65; font-weight: 500; max-width: 800px; }
+.x-quote cite { display: block; margin-top: 20px; font-style: normal; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--secondary); font-weight: 700; }
+.x-faq { margin-top: 40px; border-top: 1px solid var(--border); }
+.x-faq__item { border-bottom: 1px solid var(--border); }
+.x-faq__q { width: 100%; background: none; border: 0; font: inherit; font-weight: 700; font-size: 1.04rem; text-align: left; padding: 22px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 18px; color: var(--text); }
+.x-faq__q::after { content: "+"; flex: none; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 400; color: var(--secondary); transition: transform 0.3s var(--ease); }
+.x-faq__item.open .x-faq__q::after { content: "\2013"; }
+.x-faq__a { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease); }
+.x-faq__a p { padding: 0 0 26px; color: var(--muted); max-width: 760px; }
+.x-mono { width: 92px; height: 92px; border-radius: 100px; background: var(--primary); color: var(--secondary); display: inline-flex; align-items: center; justify-content: center; font-size: 1.7rem; font-weight: 800; letter-spacing: 0.06em; border: 2px solid var(--secondary); margin-bottom: 18px; }
+.x-member { padding: 34px 30px; }
+.x-member h3 { font-size: 1.45rem; margin-bottom: 6px; }
+.x-member p.x-small { margin-top: 12px; }
+.x-member .x-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.x-member .x-tags span { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--bg); border: 1px solid var(--border); border-radius: 100px; padding: 7px 14px; color: var(--primary); }
+.x-panels { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 40px; }
+.x-panel { border-radius: 20px; padding: clamp(30px, 4vw, 48px); }
+.x-panel--esp { background: var(--primary); color: var(--cream); }
+.x-panel--esp h3 { color: #fff; }
+.x-panel--esp p { color: rgba(241,235,220,0.85); }
+.x-panel--card { background: var(--card); border: 1px solid var(--border); }
+.x-panel h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 14px; }
+.x-panel p + p { margin-top: 12px; }
+.x-soc { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+.x-soc a { border: 1px solid var(--border); border-radius: 100px; padding: 10px 20px; font-size: 0.85rem; font-weight: 700; text-decoration: none; color: var(--primary); background: var(--card); }
+.x-soc a:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+.x-val { margin-top: 16px; }
+
 /* reveal */
 .x-js .x-rv { opacity: 0; transform: translateY(26px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
 .x-js .x-rv.is-in { opacity: 1; transform: none; }
@@ -321,6 +369,10 @@ tr.adm-done td { opacity: 0.5; }
   .x-team { grid-template-columns: 1fr; }
   .x-contact-grid { grid-template-columns: 1fr; }
   .x-grid3 { grid-template-columns: 1fr; }
+  .x-pbanner__grid { grid-template-columns: 1fr; }
+  .x-split { grid-template-columns: 1fr; }
+  .x-split--rev .x-split__img { order: 0; }
+  .x-panels { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
   .x-menu, .x-header .x-langwrap, .x-header .x-cta { display: none; }
@@ -662,37 +714,83 @@ tr.adm-done td { opacity: 0.5; }
 
   <!-- BUY -->
   <div class="x-page" data-page="buy">
-    <section class="x-phero">
-      <div class="x-wrap">
-        <p class="x-eyebrow" data-i18n="buy.kicker">Buying</p>
-        <h1 data-i18n="buy.title">Buy with <em>local eyes.</em></h1>
-        <p class="x-lead" data-i18n="buy.sub">Imagine buying a property that seems perfect, only to find out that in a few years, you'll be in the middle of a construction site. Our neighbourhood expertise protects you from surprises like that.</p>
+    <section class="x-pbanner">
+      <div class="x-wrap x-pbanner__grid">
+        <div>
+          <p class="x-eyebrow" data-i18n="buy.kicker">Buying</p>
+          <h1 data-i18n="buy.title">Buy with <em>local eyes.</em></h1>
+          <p class="x-lead" data-i18n="buy.sub">Imagine buying a property that seems perfect, only to find out that in a few years, you'll be in the middle of a construction site. Our neighbourhood expertise protects you from surprises like that.</p>
+          <p style="margin-top:28px"><a class="x-btn x-btn--fill" href="#/contact" data-i18n="buy.cta">Start Your Search</a></p>
+        </div>
+        <div class="x-pbanner__img"><img src="img-living.jpg" alt="Elegant living room" /></div>
       </div>
     </section>
     <section class="x-sec">
       <div class="x-wrap">
-        <h2 class="x-h2" data-i18n="buy.h2">How we help buyers</h2>
-        <div class="x-steps" style="grid-template-columns:repeat(3,1fr)">
-          <div class="x-step">
-            <div class="x-step__body">
-              <div class="x-step__num">01</div>
-              <h3 data-i18n="buy.s1t">Neighbourhood insight</h3>
-              <p data-i18n="buy.s1d">We know the small nuances that change a home's value, from new transit lines to planned developments.</p>
-            </div>
+        <p class="x-eyebrow" data-i18n="buy.h2k">How we help buyers</p>
+        <h2 class="x-h2" data-i18n="buy.h2">Three reasons buyers <em>choose us.</em></h2>
+        <div class="x-split">
+          <div class="x-split__img"><img src="listing-home.jpg" alt="Family home in Mississauga" /></div>
+          <div>
+            <span class="x-num">01</span>
+            <h3 data-i18n="buy.s1t">Neighbourhood insight</h3>
+            <p data-i18n="buy.s1d">We know the small nuances that change a home's value, from new transit lines to planned developments. That local knowledge is what keeps a perfect-looking purchase from becoming a costly surprise.</p>
           </div>
-          <div class="x-step">
-            <div class="x-step__body">
-              <div class="x-step__num">02</div>
-              <h3 data-i18n="buy.s2t">First-time buyers welcome</h3>
-              <p data-i18n="buy.s2d">Questions answered in simple terms, no pressure, no jargon. Our reviewers say it best.</p>
-            </div>
+        </div>
+        <div class="x-split x-split--rev">
+          <div class="x-split__img"><img src="listing-bungalow.jpg" alt="Bungalow on a tree-lined street" /></div>
+          <div>
+            <span class="x-num">02</span>
+            <h3 data-i18n="buy.s2t">First-time buyers welcome</h3>
+            <p data-i18n="buy.s2d">Questions answered in simple terms, no pressure, no jargon. Our reviewers say it best: the team answers every question patiently and never rushes a decision.</p>
           </div>
-          <div class="x-step">
-            <div class="x-step__body">
-              <div class="x-step__num">03</div>
-              <h3 data-i18n="buy.s3t">Investors too</h3>
-              <p data-i18n="buy.s3d">As homeowners and investors ourselves, we evaluate every deal the way we would our own.</p>
-            </div>
+        </div>
+        <div class="x-split">
+          <div class="x-split__img"><img src="listing-condo.jpg" alt="Modern condo exterior" /></div>
+          <div>
+            <span class="x-num">03</span>
+            <h3 data-i18n="buy.s3t">Investors too</h3>
+            <p data-i18n="buy.s3d">As homeowners and investors ourselves, we evaluate every deal the way we would our own. Every deal is a big deal, whatever its size.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="x-sec x-sec--alt">
+      <div class="x-wrap">
+        <p class="x-eyebrow" data-i18n="buy.proc_k">The process</p>
+        <h2 class="x-h2" data-i18n="buy.proc_t">From first call to <em>front door.</em></h2>
+        <div class="x-steps" style="grid-template-columns:repeat(4,1fr)">
+          <div class="x-step"><div class="x-step__body"><div class="x-step__num">01</div><h3 data-i18n="buy.p1t">The conversation</h3><p data-i18n="buy.p1d">Tell us what home means to you. Budget, neighbourhood, must-haves, nice-to-haves.</p></div></div>
+          <div class="x-step"><div class="x-step__body"><div class="x-step__num">02</div><h3 data-i18n="buy.p2t">The shortlist</h3><p data-i18n="buy.p2d">Carefully curated options across Mississauga and the GTA, with honest guidance on each one.</p></div></div>
+          <div class="x-step"><div class="x-step__body"><div class="x-step__num">03</div><h3 data-i18n="buy.p3t">The offer</h3><p data-i18n="buy.p3d">Pricing grounded in real market research, and negotiation that protects your interests.</p></div></div>
+          <div class="x-step"><div class="x-step__body"><div class="x-step__num">04</div><h3 data-i18n="buy.p4t">The keys</h3><p data-i18n="buy.p4d">We stay with you through every condition and signature until the keys are in your hand.</p></div></div>
+        </div>
+        <div class="x-quote">
+          <blockquote data-i18n="buy.q">As a first time buyer, there are many unknown factors and I had lots of questions. The team at Shoreline Realty was able to answer all my questions in simple terms. I would highly recommend Shoreline Realty for any first-time buyer.</blockquote>
+          <cite data-i18n="buy.qc">Google review, August 2021</cite>
+        </div>
+      </div>
+    </section>
+    <section class="x-sec">
+      <div class="x-wrap">
+        <p class="x-eyebrow" data-i18n="faq.k">Questions, answered</p>
+        <h2 class="x-h2" data-i18n="buy.faq_t">Buyer <em>FAQs.</em></h2>
+        <div class="x-faq">
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="buy.f1q">Should I use a real estate agent to find a home in the GTA?</button>
+            <div class="x-faq__a"><p data-i18n="buy.f1a">Yes. In a competitive market, an agent saves you money and time while giving you access to more properties, including ones you would never find on your own.</p></div>
+          </div>
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="buy.f2q">What areas do you serve?</button>
+            <div class="x-faq__a"><p data-i18n="buy.f2a">Mississauga (Port Credit, Lakeview, Clarkson, Erindale, Applewood), Oakville, Burlington, Etobicoke, Downtown Toronto and Hamilton.</p></div>
+          </div>
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="buy.f3q">Will I feel pressured to make an offer?</button>
+            <div class="x-faq__a"><p data-i18n="buy.f3a">No. Our reviewers say it plainly: helpful, responsive, and never pressured to make an offer. We answer questions in simple terms and let you decide.</p></div>
+          </div>
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="buy.f4q">Do you work with investors as well as families?</button>
+            <div class="x-faq__a"><p data-i18n="buy.f4a">Both. As homeowners and investors ourselves, we evaluate every deal with the same care, whether it is a first home or an investment property.</p></div>
           </div>
         </div>
         <div class="x-strip">
@@ -700,7 +798,7 @@ tr.adm-done td { opacity: 0.5; }
             <h3 data-i18n="buy.cta_t">Ready to start looking?</h3>
             <p data-i18n="buy.cta_d">Tell us what home means to you. We will take it from there.</p>
           </div>
-          <a class="x-btn x-btn--fill" href="#/contact" data-i18n="buy.cta">Start Your Search</a>
+          <a class="x-btn x-btn--fill" href="#/contact" data-i18n="buy.cta2">Start Your Search</a>
         </div>
       </div>
     </section>
@@ -708,41 +806,23 @@ tr.adm-done td { opacity: 0.5; }
 
   <!-- SELL -->
   <div class="x-page" data-page="sell">
-    <section class="x-phero">
-      <div class="x-wrap">
-        <p class="x-eyebrow" data-i18n="sell.kicker">Selling</p>
-        <h1 data-i18n="sell.title">Sell for what it is <em>worth.</em></h1>
-        <p class="x-lead" data-i18n="sell.sub">Market research, pricing strategy, MLS listing and negotiation through to closing. Small nuances make a big difference in the value of your home, and we know where to look.</p>
+    <section class="x-pbanner">
+      <div class="x-wrap x-pbanner__grid">
+        <div>
+          <p class="x-eyebrow" data-i18n="sell.kicker">Selling</p>
+          <h1 data-i18n="sell.title">Sell for what it is <em>worth.</em></h1>
+          <p class="x-lead" data-i18n="sell.sub">Market research, pricing strategy, MLS listing and negotiation through to closing. Small nuances make a big difference in the value of your home, and we know where to look.</p>
+          <p style="margin-top:28px"><a class="x-btn x-btn--fill" href="#/sell" data-scrollto="sell-est" data-i18n="sell.cta">What Is My Home Worth?</a></p>
+        </div>
+        <div class="x-pbanner__img"><img src="img-kitchen.jpg" alt="Luxury kitchen" /></div>
       </div>
     </section>
-    <section class="x-sec">
+    <section class="x-sec" id="sell-est">
       <div class="x-wrap">
-        <h2 class="x-h2" data-i18n="sell.h2">How we help sellers</h2>
-        <div class="x-steps" style="grid-template-columns:repeat(3,1fr)">
-          <div class="x-step">
-            <div class="x-step__body">
-              <div class="x-step__num">01</div>
-              <h3 data-i18n="sell.s1t">Pricing strategy</h3>
-              <p data-i18n="sell.s1d">Careful market research positions your home to attract the right buyers at the right price.</p>
-            </div>
-          </div>
-          <div class="x-step">
-            <div class="x-step__body">
-              <div class="x-step__num">02</div>
-              <h3 data-i18n="sell.s2t">MLS exposure</h3>
-              <p data-i18n="sell.s2d">Your listing presented properly across the MLS system and our marketing channels.</p>
-            </div>
-          </div>
-          <div class="x-step">
-            <div class="x-step__body">
-              <div class="x-step__num">03</div>
-              <h3 data-i18n="sell.s3t">Negotiation to closing</h3>
-              <p data-i18n="sell.s3d">We stay with you through every offer, condition and signature until the keys change hands.</p>
-            </div>
-          </div>
-        </div>
-        <p class="x-eyebrow" style="margin-top:56px"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true" style="width:18px;height:18px"><path d="M10 1l2.2 6.1L18.5 8l-5 4.2 1.6 6.3L10 14.9 4.9 18.5l1.6-6.3L1.5 8l6.3-.9z" stroke="#3b1107" stroke-width="1.5" stroke-linejoin="round"/></svg><span data-i18n="sell.est_k">Start with an instant estimate</span></p>
-        <div class="x-est" style="margin-top:20px">
+        <p class="x-eyebrow" data-i18n="sell.est_k">Start with an instant estimate</p>
+        <h2 class="x-h2" data-i18n="sell.est_t">Your home's value, <em>in seconds.</em></h2>
+        <p class="x-lead" data-i18n="sell.est_d">A ballpark estimate for planning. For a full valuation, our team looks at the details no algorithm can see.</p>
+        <div class="x-est x-val">
           <div class="x-grid3">
             <div class="x-field">
               <label class="x-label" for="e2-hood" data-i18n="est.hood">Neighbourhood</label>
@@ -781,40 +861,131 @@ tr.adm-done td { opacity: 0.5; }
         </div>
       </div>
     </section>
-  </div>
-
-  <!-- LEASE -->
-  <div class="x-page" data-page="lease">
-    <section class="x-phero">
+    <section class="x-sec x-sec--alt">
       <div class="x-wrap">
-        <p class="x-eyebrow" data-i18n="lease.kicker">Leasing</p>
-        <h1 data-i18n="lease.title">Every lease gets <em>the full treatment.</em></h1>
-        <p class="x-lead" data-i18n="lease.sub">Don't settle for a brokerage that only focuses on sales. At Shoreline Realty, we understand the importance of finding a place to call home, and that's why we enjoy taking on leases.</p>
+        <div class="x-split">
+          <div class="x-split__img"><img src="img-dusk.jpg" alt="Home exterior at dusk" /></div>
+          <div>
+            <p class="x-eyebrow" data-i18n="sell.strat_k">Pricing strategy</p>
+            <h2 class="x-h2" data-i18n="sell.strat_t">Small nuances, <em>big difference.</em></h2>
+            <p data-i18n="sell.strat_d">We know that small nuances make a big difference in the value of your home. For example, new public transportation infrastructure can greatly increase the value of your property. Our market research finds the details that set your price apart.</p>
+          </div>
+        </div>
+        <p class="x-eyebrow" style="margin-top:64px" data-i18n="sell.proc_k">The process</p>
+        <h2 class="x-h2" data-i18n="sell.proc_t">From listing to <em>closing day.</em></h2>
+        <div class="x-steps" style="grid-template-columns:repeat(4,1fr)">
+          <div class="x-step"><div class="x-step__body"><div class="x-step__num">01</div><h3 data-i18n="sell.p1t">Market research</h3><p data-i18n="sell.p1d">A careful study of comparable sales and local trends, so your price is grounded in reality.</p></div></div>
+          <div class="x-step"><div class="x-step__body"><div class="x-step__num">02</div><h3 data-i18n="sell.p2t">Pricing strategy</h3><p data-i18n="sell.p2d">Positioned to attract the right buyers at the right price, from day one on the market.</p></div></div>
+          <div class="x-step"><div class="x-step__body"><div class="x-step__num">03</div><h3 data-i18n="sell.p3t">MLS listing</h3><p data-i18n="sell.p3d">Your home presented properly across the MLS system and our marketing channels.</p></div></div>
+          <div class="x-step"><div class="x-step__body"><div class="x-step__num">04</div><h3 data-i18n="sell.p4t">Negotiation to closing</h3><p data-i18n="sell.p4d">We stay with you through every offer, condition and signature until the keys change hands.</p></div></div>
+        </div>
+        <div class="x-quote">
+          <blockquote data-i18n="sell.q">The team over at Shoreline Reality are the real deal. My home requirements were very unique which created lots of challenges. The team never got discouraged and worked tirelessly for me. In the end, I moved into my dream home for the right price.</blockquote>
+          <cite data-i18n="sell.qc">Google review, August 2020</cite>
+        </div>
       </div>
     </section>
     <section class="x-sec">
       <div class="x-wrap">
-        <div class="x-steps" style="grid-template-columns:repeat(3,1fr)">
-          <div class="x-step">
-            <div class="x-step__body">
-              <div class="x-step__num">01</div>
-              <h3 data-i18n="lease.s1t">For Landlords</h3>
-              <p data-i18n="lease.s1d">Targeted marketing strategies and careful tenant placement. Leasing a property gets the same care and attention to detail as if it were being sold.</p>
-            </div>
+        <p class="x-eyebrow" data-i18n="faq.k">Questions, answered</p>
+        <h2 class="x-h2" data-i18n="sell.faq_t">Seller <em>FAQs.</em></h2>
+        <div class="x-faq">
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="sell.f1q">How much is my home worth?</button>
+            <div class="x-faq__a"><p data-i18n="sell.f1a">Start with the instant estimate above, then request a full home evaluation. We look at comparable sales, neighbourhood trends and the small nuances an algorithm misses, and there is no pressure and no obligation.</p></div>
           </div>
-          <div class="x-step">
-            <div class="x-step__body">
-              <div class="x-step__num">02</div>
-              <h3 data-i18n="lease.s2t">For Tenants</h3>
-              <p data-i18n="lease.s2d">Using a rental agent saves you money and time, and opens doors to more rental properties across the GTA's hot rental market.</p>
-            </div>
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="sell.f2q">What does selling with you involve?</button>
+            <div class="x-faq__a"><p data-i18n="sell.f2a">Market research, a pricing strategy, an MLS listing, and negotiation through to closing. One team handles the whole journey with you.</p></div>
           </div>
-          <div class="x-step">
-            <div class="x-step__body">
-              <div class="x-step__num">03</div>
-              <h3 data-i18n="lease.s3t">No Pressure</h3>
-              <p data-i18n="lease.s3d">Our reviewers say it plainly: helpful, responsive, and never pressured to make an offer.</p>
-            </div>
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="sell.f3q">What areas do you sell in?</button>
+            <div class="x-faq__a"><p data-i18n="sell.f3a">Mississauga (Port Credit, Lakeview, Clarkson, Erindale, Applewood), Oakville, Burlington, Etobicoke, Downtown Toronto and Hamilton.</p></div>
+          </div>
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="sell.f4q">Why does pricing strategy matter so much?</button>
+            <div class="x-faq__a"><p data-i18n="sell.f4a">Small nuances make a big difference in the value of your home. New transit infrastructure, school zones, even street-level details can move a price. We know where to look.</p></div>
+          </div>
+        </div>
+        <div class="x-strip">
+          <div>
+            <h3 data-i18n="sell.cta_t">Thinking of selling?</h3>
+            <p data-i18n="sell.cta_d">Start with a conversation about what your home could achieve.</p>
+          </div>
+          <a class="x-btn x-btn--fill" href="#/contact" data-i18n="sell.cta2">Talk To Us</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- LEASE -->
+  <div class="x-page" data-page="lease">
+    <section class="x-pbanner">
+      <div class="x-wrap x-pbanner__grid">
+        <div>
+          <p class="x-eyebrow" data-i18n="lease.kicker">Leasing</p>
+          <h1 data-i18n="lease.title">Every lease gets <em>the full treatment.</em></h1>
+          <p class="x-lead" data-i18n="lease.sub">Don't settle for a brokerage that only focuses on sales. At Shoreline Realty, we understand the importance of finding a place to call home, and that's why we enjoy taking on leases.</p>
+          <p style="margin-top:28px"><a class="x-btn x-btn--fill" href="#/contact" data-i18n="lease.cta">Talk To Us</a></p>
+        </div>
+        <div class="x-pbanner__img"><img src="img-dusk.jpg" alt="Home exterior at dusk" /></div>
+      </div>
+    </section>
+    <section class="x-sec">
+      <div class="x-wrap">
+        <p class="x-eyebrow" data-i18n="lease.panels_k">Two sides, one standard</p>
+        <h2 class="x-h2" data-i18n="lease.panels_t">Landlords <em>and</em> tenants.</h2>
+        <div class="x-panels">
+          <div class="x-panel x-panel--esp">
+            <h3 data-i18n="lease.s1t">For landlords</h3>
+            <p data-i18n="lease.s1d">Targeted marketing strategies, including classified websites and rental listing websites, plus careful tenant placement.</p>
+            <p data-i18n="lease.s1e">As homeowners and investors ourselves, we know that leasing a property requires the same level of care and attention to detail as if it were being sold.</p>
+          </div>
+          <div class="x-panel x-panel--card">
+            <h3 data-i18n="lease.s2t">For tenants</h3>
+            <p data-i18n="lease.s2d">Using a rental agent saves you money and time, and opens doors to more rental properties across the GTA's hot rental market.</p>
+            <p data-i18n="lease.s2e">Our reviewers say it plainly: helpful, responsive, and never pressured to make an offer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="x-sec x-sec--alt">
+      <div class="x-wrap">
+        <div class="x-split">
+          <div class="x-split__img"><img src="img-marina.jpg" alt="Port Credit marina at blue hour" /></div>
+          <div>
+            <p class="x-eyebrow" data-i18n="lease.marco_k">Your rental specialist</p>
+            <h2 class="x-h2" data-i18n="lease.marco_t">Marco Pedri, <em>the go-to rental agent.</em></h2>
+            <p data-i18n="lease.marco_d">Named one of the area's go-to rental agents on Yelp, Marco holds a 4.9 rating across 44 Google reviews. He walks every lease through with you, line by line, so you understand everything you sign.</p>
+            <p style="margin-top:22px"><a class="x-btn" href="#/team" data-i18n="lease.marco_c">Meet Marco</a></p>
+          </div>
+        </div>
+        <div class="x-quote">
+          <blockquote data-i18n="lease.q">My experience dealing with the team at Shoreline Realty has been exceptional. I'd specifically like to thank Marco Pedri for his time when dealing with my most recent lease. His attention to detail is second to none. He insured I was properly protected and walked through the lease with me to make sure I understood everything which was written. I never felt rushed and I'm now in a place I can call my own.</blockquote>
+          <cite data-i18n="lease.qc">Google review, August 2021</cite>
+        </div>
+      </div>
+    </section>
+    <section class="x-sec">
+      <div class="x-wrap">
+        <p class="x-eyebrow" data-i18n="faq.k">Questions, answered</p>
+        <h2 class="x-h2" data-i18n="lease.faq_t">Leasing <em>FAQs.</em></h2>
+        <div class="x-faq">
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="lease.f1q">Should I use a real estate agent to find a rental in Toronto?</button>
+            <div class="x-faq__a"><p data-i18n="lease.f1a">Yes. Using a rental agent in today's hot rental market saves you money and time while giving you access to more rental properties than you would find on your own.</p></div>
+          </div>
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="lease.f2q">Do you help tenants as well as landlords?</button>
+            <div class="x-faq__a"><p data-i18n="lease.f2a">Both. We run targeted marketing and careful tenant placement for landlords, and patient, pressure-free search support for tenants.</p></div>
+          </div>
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="lease.f3q">What areas do you lease in?</button>
+            <div class="x-faq__a"><p data-i18n="lease.f3a">Mississauga (Port Credit, Lakeview, Clarkson, Erindale, Applewood), Oakville, Burlington, Etobicoke, Downtown Toronto and Hamilton.</p></div>
+          </div>
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="lease.f4q">Will I feel pressured to sign?</button>
+            <div class="x-faq__a"><p data-i18n="lease.f4a">Never. Reviewers describe Marco as highly responsive and an excellent communicator who was happy to do multiple days of viewings and never pressured them to make an offer.</p></div>
           </div>
         </div>
         <div class="x-strip">
@@ -822,7 +993,7 @@ tr.adm-done td { opacity: 0.5; }
             <h3 data-i18n="lease.cta_t">Leasing soon?</h3>
             <p data-i18n="lease.cta_d">Landlord or tenant, start with a conversation.</p>
           </div>
-          <a class="x-btn x-btn--fill" href="#/contact" data-i18n="lease.cta">Talk To Us</a>
+          <a class="x-btn x-btn--fill" href="#/contact" data-i18n="lease.cta2">Talk To Us</a>
         </div>
       </div>
     </section>
@@ -830,17 +1001,21 @@ tr.adm-done td { opacity: 0.5; }
 
   <!-- STORY -->
   <div class="x-page" data-page="story">
-    <section class="x-phero">
-      <div class="x-wrap">
-        <p class="x-eyebrow" data-i18n="story.kicker">Our story</p>
-        <h1 data-i18n="story.title">A family brokerage, <em>then and now.</em></h1>
-        <p class="x-lead" data-i18n="story.sub">What started as a boutique agency in Mississauga now serves families across Ontario, without losing the personal touch it began with.</p>
+    <section class="x-pbanner">
+      <div class="x-wrap x-pbanner__grid">
+        <div>
+          <p class="x-eyebrow" data-i18n="story.kicker">Our story</p>
+          <h1 data-i18n="story.title">A family brokerage, <em>then and now.</em></h1>
+          <p class="x-lead" data-i18n="story.sub">What started as a boutique agency in Mississauga now serves families across Ontario, without losing the personal touch it began with.</p>
+        </div>
+        <div class="x-pbanner__img"><img src="img-marina.jpg" alt="Port Credit marina at blue hour" /></div>
       </div>
     </section>
     <section class="x-sec">
       <div class="x-wrap">
-        <p class="x-lead" style="max-width:760px" data-i18n="story.p1">Founded by Dagmar and John, Shoreline Realty Corp., Brokerage has been servicing the Lakeview community for more than 25 years. What started as a small, independent brokerage is now a boutique-style firm serving the Greater Toronto Area. Marco Pedri, raised in the business since birth, now continues the legacy as a broker himself.</p>
-        <p class="x-lead" style="max-width:760px;margin-top:16px" data-i18n="story.p2">We build life-long relationships with all our clients, giving us a strong reputation of excellence within the industry. Just like the lighthouse in our logo, we are always here for you.</p>
+        <p class="x-eyebrow" data-i18n="story.about_k">In their own words</p>
+        <h2 class="x-h2" data-i18n="story.about_t">Who <em>we are.</em></h2>
+        <p class="x-lead" style="max-width:820px" data-i18n="story.about">Shoreline Realty Corp., Brokerage is a full-service real estate brokerage helping families buy, sell, and lease homes for over 35 years in Ontario. What started as a boutique style real estate agency in Mississauga, Shoreline Realty has expanded to service multiple cities across Ontario. Our growth has not stopped us from providing carefully curated home buying and selling strategies for our clients. We recognize everyone's real estate needs are unique and your plan should reflect that. We build life-long relationships with all our clients giving us a strong reputation of excellence within the industry. Just like the lighthouse in our logo, we are always here for you.</p>
         <div class="x-timeline">
           <div><b>1988</b><p data-i18n="story.t1">Dagmar Prugler is first licensed in real estate.</p></div>
           <div><b>1999</b><p data-i18n="story.t2">Dagmar opens Shoreline Realty Corp., Brokerage in Mississauga.</p></div>
@@ -849,44 +1024,102 @@ tr.adm-done td { opacity: 0.5; }
         </div>
       </div>
     </section>
+    <section class="x-sec x-sec--alt">
+      <div class="x-wrap">
+        <div class="x-split">
+          <div class="x-split__img"><img src="img-living.jpg" alt="Warm family living room" /></div>
+          <div>
+            <p class="x-eyebrow" data-i18n="story.leg_k">Family legacy</p>
+            <h2 class="x-h2" data-i18n="story.leg_t">Born into the <em>business.</em></h2>
+            <p data-i18n="story.leg_d">Born in Toronto and raised in Mississauga, Marco Pedri has been immersed in the real estate industry since he was born. Both his mother and father were real estate brokers who opened their own brokerage and operated a two-person real estate firm: Shoreline Realty. Now Marco continues the legacy as a broker himself, spearheading the firm's latest innovations.</p>
+            <p style="margin-top:22px"><a class="x-btn" href="#/team" data-i18n="story.leg_c">Meet The Family</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="x-sec">
+      <div class="x-wrap">
+        <p class="x-eyebrow" data-i18n="story.val_k">What we believe</p>
+        <h2 class="x-h2" data-i18n="story.val_t">Every deal is <em>a big deal.</em></h2>
+        <div class="x-steps" style="grid-template-columns:repeat(3,1fr)">
+          <div class="x-step"><div class="x-step__body"><div class="x-step__num">01</div><h3 data-i18n="story.v1t">Relationships for life</h3><p data-i18n="story.v1d">We build life-long relationships with all our clients, giving us a strong reputation of excellence within the industry.</p></div></div>
+          <div class="x-step"><div class="x-step__body"><div class="x-step__num">02</div><h3 data-i18n="story.v2t">Every plan is personal</h3><p data-i18n="story.v2d">We recognize everyone's real estate needs are unique and your plan should reflect that.</p></div></div>
+          <div class="x-step"><div class="x-step__body"><div class="x-step__num">03</div><h3 data-i18n="story.v3t">The care of an owner</h3><p data-i18n="story.v3d">As homeowners and investors ourselves, we treat your property with the same care and attention to detail as if it were being sold.</p></div></div>
+        </div>
+        <p class="x-eyebrow" style="margin-top:64px" data-i18n="media.kicker">In the media</p>
+        <h2 class="x-h2" data-i18n="media.title">Cited where <em>it counts.</em></h2>
+        <p class="x-lead" data-i18n="media.sub">Marco Pedri is regularly invited to comment on the GTA market by national media.</p>
+        <div class="x-media">
+          <span>The Canadian Press</span><span>CityNews</span><span>CP24</span><span>Real Estate Magazine</span>
+        </div>
+        <div class="x-strip">
+          <div>
+            <h3 data-i18n="story.cta_t">Become part of the story</h3>
+            <p data-i18n="story.cta_d">Buy, sell or lease with a family that treats you like one.</p>
+          </div>
+          <a class="x-btn x-btn--fill" href="#/contact" data-i18n="story.cta">Get In Touch</a>
+        </div>
+      </div>
+    </section>
   </div>
 
   <!-- TEAM -->
   <div class="x-page" data-page="team">
-    <section class="x-phero">
-      <div class="x-wrap">
-        <p class="x-eyebrow" data-i18n="team.kicker">Our team</p>
-        <h1 data-i18n="team.title">The family behind <em>the firm.</em></h1>
-        <p class="x-lead" data-i18n="team.sub">Three brokers, one standard: carefully curated strategies for every client, and relationships that last well past closing day.</p>
+    <section class="x-pbanner">
+      <div class="x-wrap x-pbanner__grid">
+        <div>
+          <p class="x-eyebrow" data-i18n="team.kicker">Our team</p>
+          <h1 data-i18n="team.title">The family behind <em>the firm.</em></h1>
+          <p class="x-lead" data-i18n="team.sub">Three brokers, one standard: carefully curated strategies for every client, and relationships that last well past closing day.</p>
+        </div>
+        <div class="x-pbanner__img"><img src="img-kitchen.jpg" alt="Gathering around the kitchen table" /></div>
       </div>
     </section>
     <section class="x-sec">
       <div class="x-wrap">
         <div class="x-team">
           <div class="x-member">
-            <div class="x-member__ph"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="8"/><path d="M10 42c2-9 8-14 14-14s12 5 14 14"/></svg></div>
-            <div class="x-member__body">
-              <p class="x-member__role" data-i18n="team.r1">Broker of Record · Owner</p>
-              <h3>Dagmar Prugler</h3>
-              <p class="x-small" data-i18n="team.d1">First licensed in 1988 and opened the brokerage in 1999. Speaks English and Slovak.</p>
-            </div>
+            <div class="x-mono" aria-hidden="true">DP</div>
+            <p class="x-member__role" data-i18n="team.r1">Broker of Record · Owner</p>
+            <h3>Dagmar Prugler</h3>
+            <p class="x-small" data-i18n="team.d1">First licensed in 1988, Dagmar opened Shoreline Realty Corp., Brokerage in 1999 and has led it ever since. A boutique brokerage in the truest sense: personal, careful, and built on relationships.</p>
+            <div class="x-tags"><span data-i18n="team.t1a">English</span><span data-i18n="team.t1b">Slovak</span><span data-i18n="team.t1c">Since 1988</span></div>
           </div>
           <div class="x-member">
-            <div class="x-member__ph"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="8"/><path d="M10 42c2-9 8-14 14-14s12 5 14 14"/></svg></div>
-            <div class="x-member__body">
-              <p class="x-member__role" data-i18n="team.r2">Broker · Co-founder</p>
-              <h3>John Pedri</h3>
-              <p class="x-small" data-i18n="team.d2">Co-founded the brokerage with Dagmar. Focus areas include condos and investments.</p>
-            </div>
+            <div class="x-mono" aria-hidden="true">JP</div>
+            <p class="x-member__role" data-i18n="team.r2">Broker · Co-founder</p>
+            <h3>John Pedri</h3>
+            <p class="x-small" data-i18n="team.d2">John co-founded the brokerage with Dagmar, building it from a two-person firm into a GTA boutique. His focus areas include condos and investments.</p>
+            <div class="x-tags"><span data-i18n="team.t2a">Condos</span><span data-i18n="team.t2b">Investments</span><span data-i18n="team.t2c">Co-founder</span></div>
           </div>
           <div class="x-member">
-            <div class="x-member__ph"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="8"/><path d="M10 42c2-9 8-14 14-14s12 5 14 14"/></svg></div>
-            <div class="x-member__body">
-              <p class="x-member__role" data-i18n="team.r3">Broker</p>
-              <h3>Marco Pedri</h3>
-              <p class="x-small" data-i18n="team.d3">Born in Toronto and raised in Mississauga, immersed in real estate since birth. Joined as a broker in 2017 and continues the family legacy.</p>
-            </div>
+            <div class="x-mono" aria-hidden="true">MP</div>
+            <p class="x-member__role" data-i18n="team.r3">Broker</p>
+            <h3>Marco Pedri</h3>
+            <p class="x-small" data-i18n="team.d3">Born in Toronto and raised in Mississauga, Marco has been immersed in real estate since birth. He joined the family firm as a broker in 2017 and now spearheads its innovations. A rental and leasing specialist, he holds a 4.9 rating across 44 Google reviews and is quoted by national media on the GTA market.</p>
+            <div class="x-tags"><span data-i18n="team.t3a">Leasing specialist</span><span data-i18n="team.t3b">4.9 rating</span><span data-i18n="team.t3c">647-920-1314</span></div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="x-sec x-sec--alt">
+      <div class="x-wrap">
+        <p class="x-eyebrow" data-i18n="team.press_k">In the media</p>
+        <h2 class="x-h2" data-i18n="team.press_t">Quoted <em>nationally.</em></h2>
+        <p class="x-lead" data-i18n="team.press_d">Marco's market commentary has appeared in national outlets covering the GTA rental market and national sales trends.</p>
+        <div class="x-media">
+          <span>The Canadian Press</span><span>CityNews</span><span>CP24</span><span>Real Estate Magazine</span>
+        </div>
+        <div class="x-quote">
+          <blockquote data-i18n="team.q">Something as simple as changing a sign from "For Sale" to "Sold" or "For Lease" to "Leased" gets me excited and puts a smile on my face. It's a job well-done and I've made a client happy.</blockquote>
+          <cite data-i18n="team.qc">Marco Pedri, Broker</cite>
+        </div>
+        <div class="x-strip">
+          <div>
+            <h3 data-i18n="team.cta_t">Work with the family</h3>
+            <p data-i18n="team.cta_d">Call 905-891-3300 or send a message. We answer.</p>
+          </div>
+          <a class="x-btn x-btn--fill" href="#/contact" data-i18n="team.cta">Contact Us</a>
         </div>
       </div>
     </section>
@@ -894,11 +1127,14 @@ tr.adm-done td { opacity: 0.5; }
 
   <!-- CONTACT -->
   <div class="x-page" data-page="contact">
-    <section class="x-phero">
-      <div class="x-wrap">
-        <p class="x-eyebrow" data-i18n="contact.kicker">Contact</p>
-        <h1 data-i18n="contact.title">Come by <em>Port Credit.</em></h1>
-        <p class="x-lead" data-i18n="contact.sub">Call, write, or stop in. We keep an open door.</p>
+    <section class="x-pbanner">
+      <div class="x-wrap x-pbanner__grid">
+        <div>
+          <p class="x-eyebrow" data-i18n="contact.kicker">Contact</p>
+          <h1 data-i18n="contact.title">Come by <em>Port Credit.</em></h1>
+          <p class="x-lead" data-i18n="contact.sub">Call, write, or stop in. We keep an open door.</p>
+        </div>
+        <div class="x-pbanner__img"><img src="img-dusk.jpg" alt="Home exterior at dusk" /></div>
       </div>
     </section>
     <section class="x-sec">
@@ -909,6 +1145,13 @@ tr.adm-done td { opacity: 0.5; }
             <p><b>Shoreline Realty Corp., Brokerage</b><br />92 Lakeshore Road East, Unit #215<br />Mississauga, ON L5G 4S2</p>
             <p style="margin-top:14px"><a class="x-big" href="tel:9058913300">905-891-3300</a></p>
             <p class="x-small" style="margin-top:10px" data-i18n="contact.hours">Monday to Sunday, 9:00 am to 9:00 pm</p>
+            <p class="x-eyebrow" style="margin-top:30px" data-i18n="contact.soc_k">Follow along</p>
+            <div class="x-soc">
+              <a href="https://www.facebook.com/ShorelineRealtyCorp" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.instagram.com/shorelinerealtybrokerage" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://linkedin.com/company/shoreline-realty-corp-brokerage" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://x.com/RealtyShoreline" target="_blank" rel="noopener">X</a>
+            </div>
           </div>
           <form id="c-form" class="x-est">
             <div class="x-field">
@@ -930,6 +1173,37 @@ tr.adm-done td { opacity: 0.5; }
             <div><button class="x-btn x-btn--fill" type="submit" data-i18n="form.send">Send Message</button></div>
             <p class="x-small" id="c-done" hidden data-i18n="form.done">Thank you. We will be in touch shortly.</p>
           </form>
+        </div>
+      </div>
+    </section>
+    <section class="x-sec x-sec--alt">
+      <div class="x-wrap">
+        <p class="x-eyebrow" data-i18n="faq.k">Questions, answered</p>
+        <h2 class="x-h2" data-i18n="contact.faq_t">Before you <em>reach out.</em></h2>
+        <div class="x-faq">
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="contact.f1q">Where are you located?</button>
+            <div class="x-faq__a"><p data-i18n="contact.f1a">92 Lakeshore Road East, Unit #215, in Port Credit, Mississauga, Ontario. We serve Mississauga, Oakville, Burlington, Etobicoke, Downtown Toronto and Hamilton.</p></div>
+          </div>
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="contact.f2q">When can I reach you?</button>
+            <div class="x-faq__a"><p data-i18n="contact.f2a">Monday to Sunday, 9:00 am to 9:00 pm at 905-891-3300. Or send a message any time and we will get back to you.</p></div>
+          </div>
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="contact.f3q">Do you work with first-time buyers and renters?</button>
+            <div class="x-faq__a"><p data-i18n="contact.f3a">Absolutely. First-time buyers get patient, jargon-free guidance, and tenants get the same care as buyers. Our reviewers consistently mention feeling no pressure at any step.</p></div>
+          </div>
+          <div class="x-faq__item">
+            <button class="x-faq__q" type="button" data-i18n="contact.f4q">How do I find out what my home is worth?</button>
+            <div class="x-faq__a"><p data-i18n="contact.f4a">Try the instant estimate on our Sell page, then request a full home evaluation. It is free, and there is no obligation.</p></div>
+          </div>
+        </div>
+        <div class="x-strip">
+          <div>
+            <h3 data-i18n="contact.cta_t">Prefer to talk it through?</h3>
+            <p data-i18n="contact.cta_d">Call 905-891-3300. A real person answers.</p>
+          </div>
+          <a class="x-btn x-btn--fill" href="tel:9058913300" data-i18n="contact.cta">Call Now</a>
         </div>
       </div>
     </section>
@@ -1098,6 +1372,15 @@ tr.adm-done td { opacity: 0.5; }
   closeBtn.addEventListener("click", function () { setOverlay(false); });
   overlay.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { setOverlay(false); }); });
 
+  /* in-page smooth scroll (data-scrollto) */
+  d.querySelectorAll("[data-scrollto]").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      var el = d.getElementById(a.getAttribute("data-scrollto"));
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
   /* reveal on scroll */
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
@@ -1167,6 +1450,32 @@ tr.adm-done td { opacity: 0.5; }
   }
   window.addEventListener("hashchange", route);
   route();
+})();
+</script>
+<script>
+/* ---- FAQ accordions ---- */
+(function () {
+  "use strict";
+  var d = document;
+  d.querySelectorAll(".x-faq__item").forEach(function (item) {
+    var q = item.querySelector(".x-faq__q"), a = item.querySelector(".x-faq__a");
+    q.setAttribute("aria-expanded", "false");
+    q.addEventListener("click", function () {
+      var open = item.classList.toggle("open");
+      q.setAttribute("aria-expanded", open ? "true" : "false");
+      a.style.maxHeight = open ? a.scrollHeight + "px" : "0px";
+    });
+  });
+  /* recalc open answers after a language switch changes text length */
+  d.querySelectorAll(".x-langsel").forEach(function (sel) {
+    sel.addEventListener("change", function () {
+      setTimeout(function () {
+        d.querySelectorAll(".x-faq__item.open .x-faq__a").forEach(function (a) {
+          a.style.maxHeight = a.scrollHeight + "px";
+        });
+      }, 60);
+    });
+  });
 })();
 </script>
 <script>
