@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Shoreline Realty Corp., Brokerage · Always Here For You</title>
+<meta name="description" content="Independent concept preview for Shoreline Realty Corp., Brokerage, a family-run boutique brokerage in Port Credit, Mississauga." />
+<style>
+  :root {
+    --navy: #10283f;
+    --navy-2: #0b1e30;
+    --cream: #f7f4ec;
+    --cream-2: #efe9da;
+    --brass: #b08d4f;
+    --brass-ink: #8a6d38;
+    --ink: #1c2634;
+    --muted: #5c6a7d;
+    --rule: rgba(16, 40, 63, 0.14);
+    --serif: Georgia, 'Times New Roman', 'Noto Serif', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --max: 1180px;
+    --pad: clamp(20px, 4vw, 48px);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: var(--sans); color: var(--ink); background: var(--cream); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  .x-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+  .x-notice { background: var(--navy-2); color: var(--cream); text-align: center; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; padding: 10px 16px; }
+
+  /* header */
+  .x-header { position: fixed; inset: 0 0 auto 0; z-index: 50; color: var(--cream); transition: background 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease); border-bottom: 1px solid transparent; }
+  .x-header.is-solid { background: rgba(247, 244, 236, 0.97); color: var(--navy); border-bottom-color: var(--rule); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  .x-header__in { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); height: 84px; display: flex; align-items: center; gap: 28px; transition: height 0.4s var(--ease); }
+  .x-header.is-solid .x-header__in { height: 70px; }
+  .x-mark { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .x-mark svg { width: 40px; height: 40px; flex: none; }
+  .x-mark b { display: block; font-family: var(--serif); font-weight: 400; letter-spacing: 0.24em; font-size: 1.02rem; line-height: 1.1; }
+  .x-mark span { display: block; font-size: 0.62rem; letter-spacing: 0.3em; opacity: 0.72; margin-top: 4px; }
+  .x-menu { display: flex; gap: 26px; list-style: none; margin: 0 0 0 auto; padding: 0; }
+  .x-menu a { text-decoration: none; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.92; }
+  .x-menu a:hover { opacity: 1; color: var(--brass); }
+  .x-menu a[aria-current="page"] { color: var(--brass); }
+  .x-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 26px; border: 1px solid currentColor; background: transparent; color: inherit; font: 600 0.78rem/1 var(--sans); letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; cursor: pointer; border-radius: 2px; transition: background 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease); }
+  .x-btn:hover { background: var(--brass); border-color: var(--brass); color: #fff; }
+  .x-btn--fill { background: var(--brass); border-color: var(--brass); color: #fff; }
+  .x-btn--fill:hover { background: var(--navy); border-color: var(--navy); }
+  .x-header .x-btn { min-height: 42px; padding: 0 18px; font-size: 0.72rem; }
+  .x-burger { display: none; margin-left: auto; width: 44px; height: 44px; border: 0; background: none; color: inherit; cursor: pointer; position: relative; }
+  .x-burger span { position: absolute; left: 10px; right: 10px; height: 2px; background: currentColor; transition: transform 0.4s var(--ease); }
+  .x-burger span:first-child { top: 17px; } .x-burger span:last-child { top: 25px; }
+  @media (max-width: 1080px) { .x-menu, .x-header .x-cta, .x-header .x-langwrap { display: none; } .x-burger { display: block; } }
+
+  /* language */
+  .x-langwrap { display: inline-flex; align-items: center; }
+  .x-langsel { background: transparent; border: 1px solid currentColor; border-radius: 999px; padding: 8px 12px; font: inherit; font-size: 0.78rem; color: inherit; cursor: pointer; opacity: 0.9; }
+  .x-langsel option { color: #111; }
+
+  /* mobile overlay */
+  .x-overlay { position: fixed; inset: 0; z-index: 60; background: var(--navy); color: var(--cream); display: flex; flex-direction: column; padding: 24px var(--pad) 40px; transform: translateY(-102%); transition: transform 0.5s var(--ease); }
+  .x-overlay.is-open { transform: none; }
+  .x-overlay__top { display: flex; align-items: center; justify-content: space-between; }
+  .x-close { background: none; border: 1px solid currentColor; border-radius: 50%; width: 44px; height: 44px; color: inherit; font-size: 1.2rem; cursor: pointer; }
+  .x-overlay ol { list-style: none; margin: 32px 0; padding: 0; display: grid; gap: 6px; }
+  .x-overlay ol a { font-family: var(--serif); font-size: 1.9rem; text-decoration: none; display: block; padding: 8px 0; }
+  .x-overlay ol a:hover { color: var(--brass); }
+  .x-overlay__foot { margin-top: auto; display: grid; gap: 18px; justify-items: start; }
+  .x-overlay__foot .x-langsel { border-color: var(--cream); color: var(--cream); }
+  .x-overlay__foot .x-langsel option { color: #111; }
+
+  /* pages */
+  .x-page { display: none; }
+  .x-page.active { display: block; }
+  .x-sec { padding: clamp(64px, 8vw, 120px) 0; }
+  .x-wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+  .x-sec--cream { background: var(--cream); }
+  .x-sec--sand { background: var(--cream-2); }
+  .x-sec--navy { background: var(--navy); color: var(--cream); }
+  .x-eyebrow { font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--brass-ink); margin: 0 0 18px; display: flex; align-items: center; gap: 14px; }
+  .x-eyebrow::before { content: ""; width: 34px; height: 1px; background: var(--brass); }
+  .x-sec--navy .x-eyebrow { color: var(--brass); }
+  .x-h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.08; margin: 0 0 22px; letter-spacing: 0.01em; }
+  .x-h1 em, .x-h2 em { font-style: italic; color: var(--brass-ink); }
+  .x-sec--navy .x-h1 em, .x-sec--navy .x-h2 em { color: var(--brass); }
+  .x-h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 3.6vw, 2.9rem); line-height: 1.15; margin: 0 0 18px; }
+  .x-h3 { font-family: var(--serif); font-weight: 400; font-size: 1.45rem; margin: 0 0 10px; }
+  .x-lead { font-size: 1.12rem; color: var(--muted); max-width: 640px; margin: 0 0 30px; }
+  .x-sec--navy .x-lead { color: rgba(247, 244, 236, 0.78); }
+  .x-small { font-size: 0.85rem; color: var(--muted); }
+  .x-sec--navy .x-small { color: rgba(247, 244, 236, 0.65); }
+
+  /* hero */
+  .x-hero { position: relative; min-height: 92vh; display: flex; align-items: flex-end; color: var(--cream); overflow: hidden; }
+  .x-hero__bg { position: absolute; inset: 0; }
+  .x-hero__bg img { width: 100%; height: 100%; object-fit: cover; }
+  .x-hero__bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11, 30, 48, 0.55) 0%, rgba(11, 30, 48, 0.25) 45%, rgba(11, 30, 48, 0.78) 100%); }
+  .x-hero__in { position: relative; z-index: 1; width: 100%; max-width: var(--max); margin: 0 auto; padding: 140px var(--pad) 90px; }
+  .x-hero .x-eyebrow { color: var(--brass); }
+  .x-hero__sub { font-size: 1.15rem; max-width: 620px; color: rgba(247, 244, 236, 0.88); margin: 0 0 34px; }
+  .x-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .x-hero__meta { display: flex; gap: 40px; flex-wrap: wrap; list-style: none; margin: 54px 0 0; padding: 26px 0 0; border-top: 1px solid rgba(247, 244, 236, 0.25); }
+  .x-hero__meta b { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.9rem; color: var(--brass); }
+  .x-hero__meta span { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.75; }
+
+  /* page hero (subpages) */
+  .x-phero { padding: 210px 0 70px; background: var(--navy); color: var(--cream); position: relative; overflow: hidden; }
+  .x-phero::after { content: ""; position: absolute; right: -80px; top: -80px; width: 340px; height: 340px; border: 1px solid rgba(176, 141, 79, 0.35); border-radius: 50%; }
+  .x-phero .x-eyebrow { color: var(--brass); }
+  .x-phero .x-lead { color: rgba(247, 244, 236, 0.8); }
+
+  /* services grid */
+  .x-svc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); margin-top: 44px; }
+  .x-svc > * { padding: 38px 30px 42px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); display: grid; gap: 14px; align-content: start; position: relative; text-decoration: none; color: inherit; transition: background 0.4s var(--ease); }
+  .x-svc > *::after { content: ""; position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: var(--brass); transition: width 0.5s var(--ease); }
+  .x-svc > *:hover { background: #fff; }
+  .x-svc > *:hover::after { width: 100%; }
+  .x-svc svg { width: 38px; height: 38px; stroke: var(--brass-ink); fill: none; stroke-width: 1.4; }
+  .x-svc small { font-size: 0.72rem; letter-spacing: 0.22em; color: var(--brass-ink); }
+  .x-svc p { font-size: 0.95rem; color: var(--muted); margin: 0; }
+  @media (max-width: 900px) { .x-svc { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .x-svc { grid-template-columns: 1fr; } }
+
+  /* estimator */
+  .x-est { border: 1px solid var(--rule); border-radius: 6px; padding: clamp(24px, 4vw, 44px); margin-top: 36px; display: grid; gap: 20px; background: #fff; }
+  .x-grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  @media (max-width: 720px) { .x-grid3 { grid-template-columns: 1fr; } }
+  .x-field { display: grid; gap: 8px; }
+  .x-label { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .x-input, .x-select, .x-textarea { font: inherit; font-size: 1rem; padding: 13px 14px; border: 1px solid var(--rule); border-radius: 4px; background: var(--cream); color: var(--ink); width: 100%; }
+  .x-textarea { min-height: 130px; resize: vertical; }
+  .x-est__out { border-top: 1px solid var(--rule); padding-top: 22px; display: grid; gap: 10px; }
+  .x-est__range { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.3rem); color: var(--navy); margin: 0; }
+
+  /* listings */
+  .x-filters { display: flex; gap: 14px; flex-wrap: wrap; align-items: end; margin: 30px 0 10px; }
+  .x-filters .x-field { min-width: 200px; }
+  .x-typebtns { display: flex; gap: 8px; flex-wrap: wrap; }
+  .x-typebtn { border: 1px solid var(--rule); background: transparent; border-radius: 999px; padding: 9px 18px; font: inherit; font-size: 0.85rem; cursor: pointer; color: var(--ink); }
+  .x-typebtn.on { background: var(--navy); border-color: var(--navy); color: #fff; }
+  .x-count { font-size: 0.85rem; color: var(--muted); margin: 14px 0 0; }
+  .x-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; margin-top: 22px; }
+  @media (max-width: 900px) { .x-cards { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .x-cards { grid-template-columns: 1fr; } }
+  .x-card { border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: #fff; transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease); }
+  .x-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(16, 40, 63, 0.12); }
+  .x-card__media { position: relative; aspect-ratio: 4/3; overflow: hidden; margin: 0; }
+  .x-card__media img { width: 100%; height: 100%; object-fit: cover; }
+  .x-badge { position: absolute; top: 14px; left: 14px; background: var(--navy); color: #fff; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; padding: 7px 14px; border-radius: 999px; }
+  .x-badge--sale { background: var(--brass); }
+  .x-badge--sample { background: #fff; color: var(--navy); border: 1px solid var(--navy); top: 48px; }
+  .x-card__body { padding: 22px 22px 26px; }
+  .x-card__price { font-family: var(--serif); font-size: 1.5rem; color: var(--navy); margin: 0 0 6px; }
+  .x-card h3 { font-family: var(--serif); font-weight: 400; font-size: 1.1rem; margin: 0 0 8px; }
+  .x-card__meta { display: flex; gap: 12px; flex-wrap: wrap; font-size: 0.85rem; color: var(--muted); margin: 0; }
+  .x-empty { border: 1px dashed var(--rule); border-radius: 6px; padding: 40px; text-align: center; color: var(--muted); margin-top: 22px; }
+  .x-empty[hidden] { display: none; }
+
+  /* testimonials */
+  .x-quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; margin-top: 40px; }
+  @media (max-width: 900px) { .x-quotes { grid-template-columns: 1fr; } }
+  .x-quote { border: 1px solid var(--rule); border-radius: 6px; padding: 30px 28px; background: #fff; display: grid; gap: 16px; align-content: start; }
+  .x-quote blockquote { margin: 0; font-family: var(--serif); font-size: 1.05rem; line-height: 1.55; font-style: italic; }
+  .x-quote cite { font-style: normal; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass-ink); }
+
+  /* media strip */
+  .x-media { display: flex; gap: 34px; flex-wrap: wrap; align-items: center; margin-top: 34px; }
+  .x-media span { font-family: var(--serif); font-size: 1.25rem; color: var(--cream); opacity: 0.85; }
+
+  /* team */
+  .x-team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; margin-top: 40px; }
+  @media (max-width: 900px) { .x-team { grid-template-columns: 1fr; } }
+  .x-member { border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: #fff; }
+  .x-member__ph { aspect-ratio: 1/1; background: linear-gradient(135deg, var(--navy) 0%, #1d3f5f 100%); display: flex; align-items: center; justify-content: center; }
+  .x-member__ph svg { width: 84px; height: 84px; stroke: var(--brass); fill: none; stroke-width: 1.2; opacity: 0.9; }
+  .x-member__body { padding: 26px; }
+  .x-member__role { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass-ink); margin: 0 0 8px; }
+
+  /* timeline */
+  .x-timeline { margin-top: 40px; border-left: 2px solid var(--brass); padding-left: 30px; display: grid; gap: 28px; }
+  .x-timeline b { font-family: var(--serif); font-size: 1.3rem; color: var(--brass-ink); display: block; }
+  .x-timeline p { margin: 6px 0 0; color: var(--muted); max-width: 640px; }
+
+  /* contact strip */
+  .x-strip { display: flex; gap: 26px; flex-wrap: wrap; align-items: center; justify-content: space-between; border: 1px solid var(--rule); border-radius: 6px; padding: 34px; background: #fff; margin-top: 44px; }
+  .x-strip .x-h3 { margin: 0 0 6px; }
+  .x-strip p { margin: 0; color: var(--muted); }
+
+  /* footer */
+  .x-foot { background: var(--navy-2); color: var(--cream); padding: 70px 0 34px; }
+  .x-foot__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+  @media (max-width: 800px) { .x-foot__grid { grid-template-columns: 1fr; } }
+  .x-foot h2 { font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--brass); margin: 0 0 18px; }
+  .x-foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .x-foot a { text-decoration: none; opacity: 0.85; font-size: 0.95rem; }
+  .x-foot a:hover { color: var(--brass); opacity: 1; }
+  .x-foot__base { max-width: var(--max); margin: 50px auto 0; padding: 24px var(--pad) 0; border-top: 1px solid rgba(247, 244, 236, 0.16); display: flex; gap: 18px; flex-wrap: wrap; justify-content: space-between; font-size: 0.82rem; opacity: 0.75; }
+  .x-foot__base a { color: var(--brass); }
+
+  /* reveal */
+  .x-js .x-rv { opacity: 0; transform: translateY(22px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+  .x-js .x-rv.is-in { opacity: 1; transform: none; }
+  .x-rv.d1 { transition-delay: 0.08s; } .x-rv.d2 { transition-delay: 0.16s; } .x-rv.d3 { transition-delay: 0.24s; }
+  @media (prefers-reduced-motion: reduce) {
+    .x-js .x-rv { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* admin */
+  .adm-login-form { display: grid; gap: 18px; margin-top: 28px; }
+  .adm-err { color: #b3402e; }
+  .adm-dim { opacity: 0.65; }
+  .adm-shell { display: grid; grid-template-columns: 230px 1fr; min-height: 70vh; }
+  .adm-side { background: var(--navy); color: var(--cream); padding: 28px 20px; display: flex; flex-direction: column; gap: 28px; }
+  .adm-brand b { display: block; letter-spacing: 0.22em; font-size: 0.95rem; }
+  .adm-brand span { font-size: 0.68rem; letter-spacing: 0.3em; opacity: 0.6; }
+  .adm-nav { display: grid; gap: 6px; }
+  .adm-nav button { background: none; border: 0; color: inherit; text-align: left; padding: 12px 14px; border-radius: 6px; font: inherit; cursor: pointer; opacity: 0.75; }
+  .adm-nav button.on, .adm-nav button:hover { background: rgba(255,255,255,0.1); opacity: 1; }
+  .adm-side__foot { margin-top: auto; display: grid; gap: 10px; }
+  .adm-link { background: none; border: 0; color: inherit; font: inherit; cursor: pointer; text-align: left; padding: 0; text-decoration: underline; text-underline-offset: 4px; opacity: 0.8; }
+  .adm-main { padding: clamp(24px, 4vw, 56px); display: grid; gap: 28px; align-content: start; background: var(--cream); }
+  .adm-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-top: 24px; }
+  .adm-stat { border: 1px solid var(--rule); border-radius: 6px; padding: 20px; display: grid; gap: 6px; background: #fff; }
+  .adm-stat b { font-size: 1.9rem; font-family: var(--serif); font-weight: 400; }
+  .adm-stat span { font-size: 0.85rem; opacity: 0.7; }
+  .adm-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .adm-tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: #fff; }
+  .adm-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .adm-table th, .adm-table td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+  .adm-table th { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.6; }
+  .adm-table img { width: 72px; height: 52px; object-fit: cover; border-radius: 4px; display: block; }
+  .adm-pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; background: #e8e2d2; }
+  .adm-pill--sale { background: var(--navy); color: #fff; }
+  .adm-actions { white-space: nowrap; }
+  .adm-actions button, .adm-table button { background: none; border: 1px solid var(--rule); border-radius: 6px; padding: 8px 14px; font: inherit; font-size: 0.82rem; cursor: pointer; margin-right: 8px; }
+  .adm-danger { color: #b3402e; border-color: #b3402e !important; }
+  tr.adm-done td { opacity: 0.5; }
+  .adm-form { border: 1px solid var(--rule); border-radius: 6px; padding: 24px; display: grid; gap: 16px; margin-bottom: 8px; background: #fff; }
+  .adm-form[hidden] { display: none; }
+  .adm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .adm-checks { display: flex; flex-wrap: wrap; gap: 12px 20px; padding: 10px 0; }
+  .adm-checks label { display: inline-flex; gap: 8px; align-items: center; font-size: 0.92rem; cursor: pointer; }
+  body.is-admin .x-header, body.is-admin .x-foot { display: none; }
+  @media (max-width: 760px) {
+    .adm-shell { grid-template-columns: 1fr; }
+    .adm-side { flex-direction: row; align-items: center; flex-wrap: wrap; }
+    .adm-nav { display: flex; flex-wrap: wrap; }
+    .adm-side__foot { margin-top: 0; display: flex; gap: 16px; }
+    .adm-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<header class="x-header" id="x-header">
+  <div class="x-notice" data-i18n="banner">Independent concept preview, not an official or approved business website</div>
+  <div class="x-header__in">
+    <a class="x-mark" href="#/" aria-label="Shoreline Realty Corp., Brokerage">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="#b08d4f" fill="none" stroke-width="2"><path d="M20 40V16l4-8 4 8v24"/><path d="M16 22h16M15 28h18" stroke-linecap="round"/><path d="M24 8l-9-3M24 8l9-3" stroke-linecap="round"/><path d="M8 44c4-3 8 3 12 0s8 3 12 0 8 3 8 0" stroke-linecap="round"/></g></svg>
+      <span><b>SHORELINE</b><span>REALTY CORP. · BROKERAGE</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="x-menu">
+        <li><a href="#/buy" data-i18n="nav.buy">Buy</a></li>
+        <li><a href="#/sell" data-i18n="nav.sell">Sell</a></li>
+        <li><a href="#/lease" data-i18n="nav.lease">Lease</a></li>
+        <li><a href="#/story" data-i18n="nav.story">Our Story</a></li>
+        <li><a href="#/team" data-i18n="nav.team">Team</a></li>
+        <li><a href="#/contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <label class="x-langwrap"><span class="x-sr">Language</span><select class="x-langsel" aria-label="Language"></select></label>
+    <a class="x-btn x-cta" href="#valuation" data-i18n="nav.cta">Home Evaluation</a>
+    <button class="x-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="x-overlay"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="x-overlay" id="x-overlay" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="x-overlay__top">
+    <span class="x-mark"><b>SHORELINE</b></span>
+    <button class="x-close" type="button" aria-label="Close menu">×</button>
+  </div>
+  <ol>
+    <li><a href="#/buy" data-i18n="nav.buy">Buy</a></li>
+    <li><a href="#/sell" data-i18n="nav.sell">Sell</a></li>
+    <li><a href="#/lease" data-i18n="nav.lease">Lease</a></li>
+    <li><a href="#/story" data-i18n="nav.story">Our Story</a></li>
+    <li><a href="#/team" data-i18n="nav.team">Team</a></li>
+    <li><a href="#/contact" data-i18n="nav.contact">Contact</a></li>
+  </ol>
+  <div class="x-overlay__foot">
+    <label class="x-langwrap"><span class="x-sr">Language</span><select class="x-langsel" aria-label="Language"></select></label>
+    <a class="x-btn" href="#valuation" data-i18n="nav.cta">Home Evaluation</a>
+    <p>92 Lakeshore Road East, Mississauga · <a href="tel:9058913300">905-891-3300</a></p>
+  </div>
+</div>
+
+<main>
+  <!-- HOME -->
+  <div class="x-page" data-page="home">
+    <section class="x-hero">
+      <div class="x-hero__bg"><img src="hero.jpg" alt="Port Credit shoreline at dusk" /></div>
+      <div class="x-hero__in">
+        <p class="x-eyebrow x-rv" data-i18n="hero.kicker">Port Credit, Mississauga · Boutique brokerage</p>
+        <h1 class="x-h1 x-rv d1" data-i18n="hero.title">Always Here <em>For You.</em></h1>
+        <p class="x-hero__sub x-rv d2" data-i18n="hero.sub">Just like the lighthouse in our logo, we are always here for you. A family-run brokerage helping families buy, sell and lease homes across Mississauga and the GTA for more than 25 years.</p>
+        <div class="x-btns x-rv d3">
+          <a class="x-btn x-btn--fill" href="#valuation" data-i18n="hero.cta1">What Is My Home Worth?</a>
+          <a class="x-btn" href="#listings" data-i18n="hero.cta2">Browse Listings</a>
+        </div>
+        <ul class="x-hero__meta x-rv d3">
+          <li><b data-i18n="hero.stat1n">25+ years</b><span data-i18n="hero.stat1t">Serving the GTA</span></li>
+          <li><b data-i18n="hero.stat2n">Family-run</b><span data-i18n="hero.stat2t">Boutique brokerage</span></li>
+          <li><b data-i18n="hero.stat3n">Port Credit</b><span data-i18n="hero.stat3t">Mississauga home base</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="x-sec x-sec--cream" id="services">
+      <div class="x-wrap">
+        <p class="x-eyebrow x-rv" data-i18n="svc.kicker">What we do</p>
+        <h2 class="x-h2 x-rv" data-i18n="svc.title">Every deal is <em>a big deal.</em></h2>
+        <p class="x-lead x-rv" data-i18n="svc.sub">Whether you are an investor, a first-time buyer, or looking to lease, we bring the same care to every move.</p>
+        <div class="x-svc">
+          <a href="#/buy" class="x-rv">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 19 20 6l15 13"/><path d="M9 16v18h22V16"/><path d="M17 34v-9h6v9"/></svg>
+            <small>01</small>
+            <h3 class="x-h3" data-i18n="svc.c1t">Buying</h3>
+            <p data-i18n="svc.c1d">Local neighbourhood expertise, so you never buy next to tomorrow's construction site.</p>
+          </a>
+          <a href="#/sell" class="x-rv d1">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 34V14l8-6 8 6v20"/><path d="M20 34V10l8-5 8 5v24"/><path d="M2 34h36"/></svg>
+            <small>02</small>
+            <h3 class="x-h3" data-i18n="svc.c2t">Selling</h3>
+            <p data-i18n="svc.c2d">Market research, pricing strategy, MLS listing and negotiation through to closing.</p>
+          </a>
+          <a href="#/lease" class="x-rv d2">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="13" cy="20" r="7"/><circle cx="13" cy="20" r="2"/><path d="M20 20h16M30 20v6M35 20v4"/></svg>
+            <small>03</small>
+            <h3 class="x-h3" data-i18n="svc.c3t">Leasing for Landlords</h3>
+            <p data-i18n="svc.c3d">Targeted marketing and careful tenant placement, with the same attention as a sale.</p>
+          </a>
+          <a href="#/lease" class="x-rv">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 15h28v19H6z"/><path d="M4 15l3-8h26l3 8"/><path d="M11 34v-9h7v9M23 24h7v5h-7z"/></svg>
+            <small>04</small>
+            <h3 class="x-h3" data-i18n="svc.c4t">Leasing for Tenants</h3>
+            <p data-i18n="svc.c4d">Finding a place to call home matters. We take on leases other brokerages will not.</p>
+          </a>
+          <a href="#/contact" class="x-rv d1">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 34V12h14v22"/><path d="M22 18h10v16"/><path d="M4 34h32"/></svg>
+            <small>05</small>
+            <h3 class="x-h3" data-i18n="svc.c5t">Property Management</h3>
+            <p data-i18n="svc.c5d">Steady, professional management for owners who want their investment looked after.</p>
+          </a>
+          <a href="#valuation" class="x-rv d2">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 32l10-12 7 7 13-16"/><path d="M27 11h8v8"/></svg>
+            <small>06</small>
+            <h3 class="x-h3" data-i18n="svc.c6t">Market Analysis</h3>
+            <p data-i18n="svc.c6d">Robust reports on how your local market is performing, sent straight to your inbox.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="x-sec x-sec--sand" id="valuation">
+      <div class="x-wrap">
+        <p class="x-eyebrow x-rv" data-i18n="est.kicker">Free home evaluation</p>
+        <h2 class="x-h2 x-rv" data-i18n="est.title">What is your home <em>worth?</em></h2>
+        <p class="x-lead x-rv" data-i18n="est.sub">Get an instant ballpark estimate for your GTA home. Then request a full, no-pressure valuation from our team.</p>
+        <div class="x-est x-rv">
+          <div class="x-grid3">
+            <div class="x-field">
+              <label class="x-label" for="e-hood" data-i18n="est.hood">Neighbourhood</label>
+              <select class="x-select" id="e-hood">
+                <option value="port-credit">Port Credit</option>
+                <option value="lakeview">Lakeview</option>
+                <option value="clarkson">Clarkson</option>
+                <option value="erindale">Erindale</option>
+                <option value="oakville">Oakville</option>
+                <option value="etobicoke">Etobicoke</option>
+                <option value="downtown">Downtown Toronto</option>
+                <option value="hamilton">Hamilton</option>
+              </select>
+            </div>
+            <div class="x-field">
+              <label class="x-label" for="e-type" data-i18n="est.type">Property type</label>
+              <select class="x-select" id="e-type">
+                <option value="detached" data-i18n="est.t_detached">Detached</option>
+                <option value="semi" data-i18n="est.t_semi">Semi-detached</option>
+                <option value="townhouse" data-i18n="est.t_town">Townhouse</option>
+                <option value="condo" data-i18n="est.t_condo">Condo</option>
+              </select>
+            </div>
+            <div class="x-field">
+              <label class="x-label" for="e-sqft" data-i18n="est.sqft">Interior size (sq ft)</label>
+              <input class="x-input" id="e-sqft" inputmode="numeric" placeholder="1,800" />
+            </div>
+          </div>
+          <div><button class="x-btn x-btn--fill" type="button" id="e-go" data-i18n="est.go">Get My Estimate</button></div>
+          <div class="x-est__out" id="e-out" hidden>
+            <p class="x-label" data-i18n="est.result">Estimated value range</p>
+            <p class="x-est__range" id="e-range"></p>
+            <p class="x-small" data-i18n="est.disclaimer">A ballpark estimate for planning only, not an appraisal. Every home is unique.</p>
+            <p><a class="x-btn" href="#/contact" data-i18n="est.lead">Request My Full Valuation</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="x-sec x-sec--cream" id="listings">
+      <div class="x-wrap">
+        <p class="x-eyebrow x-rv" data-i18n="list.kicker">Current listings</p>
+        <h2 class="x-h2 x-rv" data-i18n="list.title">On the market <em>now.</em></h2>
+        <p class="x-small x-rv" data-i18n="list.sample">Sample listings shown for demonstration.</p>
+        <div class="x-filters x-rv">
+          <div class="x-field">
+            <label class="x-label" for="x-type" data-i18n="list.type">Property type</label>
+            <div class="x-typebtns" id="x-typebtns">
+              <button type="button" class="x-typebtn on" data-type="all" data-i18n="list.all">All</button>
+              <button type="button" class="x-typebtn" data-type="house" data-i18n="list.house">House</button>
+              <button type="button" class="x-typebtn" data-type="condo" data-i18n="list.condo">Condo</button>
+              <button type="button" class="x-typebtn" data-type="bungalow" data-i18n="list.bungalow">Bungalow</button>
+            </div>
+          </div>
+          <div class="x-field">
+            <label class="x-label" for="x-status" data-i18n="list.status">Status</label>
+            <select class="x-select" id="x-status">
+              <option value="all" data-i18n="list.all">All</option>
+              <option value="sale" data-i18n="list.forsale">For Sale</option>
+              <option value="sold" data-i18n="list.sold">Sold</option>
+            </select>
+          </div>
+        </div>
+        <p class="x-count x-rv" id="x-count"></p>
+        <div class="x-cards" id="x-cards"></div>
+        <div class="x-empty" id="x-empty" hidden>
+          <p data-i18n="list.empty">No listings match those filters right now. Try widening your search.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="x-sec x-sec--sand" id="reviews">
+      <div class="x-wrap">
+        <p class="x-eyebrow x-rv" data-i18n="rev.kicker">Client words</p>
+        <h2 class="x-h2 x-rv" data-i18n="rev.title">In their <em>words.</em></h2>
+        <div class="x-quotes">
+          <figure class="x-quote x-rv">
+            <blockquote>My experience dealing with the team at Shoreline Realty has been exceptional. I'd specifically like to thank Marco Pedri for his time when dealing with my most recent lease. His attention to detail is second to none. I never felt rushed and I'm now in a place I can call my own.</blockquote>
+            <cite>Google review, August 2021</cite>
+          </figure>
+          <figure class="x-quote x-rv d1">
+            <blockquote>The team over at Shoreline Reality are the real deal. My home requirements were very unique which created lots of challenges. The team never got discouraged and worked tirelessly for me. In the end, I moved into my dream home for the right price.</blockquote>
+            <cite>Google review, August 2020</cite>
+          </figure>
+          <figure class="x-quote x-rv d2">
+            <blockquote>Marco helped us lease a condo in Missisauga. He was very helpful and responsive the entire time, was happy to do multiple days of viewings and never pressured us to make an offer.</blockquote>
+            <cite>Google review</cite>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="x-sec x-sec--navy" id="media">
+      <div class="x-wrap">
+        <p class="x-eyebrow x-rv" data-i18n="media.kicker">In the media</p>
+        <h2 class="x-h2 x-rv" data-i18n="media.title">Quoted where <em>it counts.</em></h2>
+        <p class="x-lead x-rv" data-i18n="media.sub">Marco Pedri is regularly asked to comment on the GTA market by national outlets.</p>
+        <div class="x-media x-rv">
+          <span>Canadian Press</span><span>CityNews Toronto</span><span>CP24</span><span>Real Estate Magazine</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="x-sec x-sec--cream">
+      <div class="x-wrap">
+        <div class="x-strip x-rv">
+          <div>
+            <h3 class="x-h3" data-i18n="strip.title">Talk to a real person.</h3>
+            <p data-i18n="strip.sub">Call 905-891-3300, or drop by 92 Lakeshore Road East, Port Credit.</p>
+          </div>
+          <a class="x-btn x-btn--fill" href="#/contact" data-i18n="strip.cta">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- BUY -->
+  <div class="x-page" data-page="buy">
+    <section class="x-phero">
+      <div class="x-wrap">
+        <p class="x-eyebrow" data-i18n="buy.kicker">Buying</p>
+        <h1 class="x-h1" data-i18n="buy.title">Buy with <em>local eyes.</em></h1>
+        <p class="x-lead" data-i18n="buy.sub">Imagine buying a property that seems perfect, only to find out that in a few years, you'll be in the middle of a construction site. Our neighbourhood expertise protects you from surprises like that.</p>
+      </div>
+    </section>
+    <section class="x-sec x-sec--cream">
+      <div class="x-wrap">
+        <h2 class="x-h2" data-i18n="buy.h2">How we help buyers</h2>
+        <div class="x-svc">
+          <div>
+            <small>01</small>
+            <h3 class="x-h3" data-i18n="buy.s1t">Neighbourhood insight</h3>
+            <p data-i18n="buy.s1d">We know the small nuances that change a home's value, from new transit lines to planned developments.</p>
+          </div>
+          <div>
+            <small>02</small>
+            <h3 class="x-h3" data-i18n="buy.s2t">First-time buyers welcome</h3>
+            <p data-i18n="buy.s2d">Questions answered in simple terms, no pressure, no jargon. Our reviewers say it best.</p>
+          </div>
+          <div>
+            <small>03</small>
+            <h3 class="x-h3" data-i18n="buy.s3t">Investors too</h3>
+            <p data-i18n="buy.s3d">As homeowners and investors ourselves, we evaluate every deal the way we would our own.</p>
+          </div>
+        </div>
+        <div class="x-strip">
+          <div>
+            <h3 class="x-h3" data-i18n="buy.cta_t">Ready to start looking?</h3>
+            <p data-i18n="buy.cta_d">Tell us what home means to you. We will take it from there.</p>
+          </div>
+          <a class="x-btn x-btn--fill" href="#/contact" data-i18n="buy.cta">Start Your Search</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SELL -->
+  <div class="x-page" data-page="sell">
+    <section class="x-phero">
+      <div class="x-wrap">
+        <p class="x-eyebrow" data-i18n="sell.kicker">Selling</p>
+        <h1 class="x-h1" data-i18n="sell.title">Sell for what it is <em>worth.</em></h1>
+        <p class="x-lead" data-i18n="sell.sub">Market research, pricing strategy, MLS listing and negotiation through to closing. Small nuances make a big difference in the value of your home, and we know where to look.</p>
+      </div>
+    </section>
+    <section class="x-sec x-sec--cream">
+      <div class="x-wrap">
+        <h2 class="x-h2" data-i18n="sell.h2">How we help sellers</h2>
+        <div class="x-svc">
+          <div>
+            <small>01</small>
+            <h3 class="x-h3" data-i18n="sell.s1t">Pricing strategy</h3>
+            <p data-i18n="sell.s1d">Careful market research positions your home to attract the right buyers at the right price.</p>
+          </div>
+          <div>
+            <small>02</small>
+            <h3 class="x-h3" data-i18n="sell.s2t">MLS exposure</h3>
+            <p data-i18n="sell.s2d">Your listing presented properly across the MLS system and our marketing channels.</p>
+          </div>
+          <div>
+            <small>03</small>
+            <h3 class="x-h3" data-i18n="sell.s3t">Negotiation to closing</h3>
+            <p data-i18n="sell.s3d">We stay with you through every offer, condition and signature until the keys change hands.</p>
+          </div>
+        </div>
+        <p class="x-eyebrow" style="margin-top:56px" data-i18n="sell.est_k">Start with an instant estimate</p>
+        <div class="x-est">
+          <div class="x-grid3">
+            <div class="x-field">
+              <label class="x-label" for="e2-hood" data-i18n="est.hood">Neighbourhood</label>
+              <select class="x-select" id="e2-hood">
+                <option value="port-credit">Port Credit</option>
+                <option value="lakeview">Lakeview</option>
+                <option value="clarkson">Clarkson</option>
+                <option value="erindale">Erindale</option>
+                <option value="oakville">Oakville</option>
+                <option value="etobicoke">Etobicoke</option>
+                <option value="downtown">Downtown Toronto</option>
+                <option value="hamilton">Hamilton</option>
+              </select>
+            </div>
+            <div class="x-field">
+              <label class="x-label" for="e2-type" data-i18n="est.type">Property type</label>
+              <select class="x-select" id="e2-type">
+                <option value="detached" data-i18n="est.t_detached">Detached</option>
+                <option value="semi" data-i18n="est.t_semi">Semi-detached</option>
+                <option value="townhouse" data-i18n="est.t_town">Townhouse</option>
+                <option value="condo" data-i18n="est.t_condo">Condo</option>
+              </select>
+            </div>
+            <div class="x-field">
+              <label class="x-label" for="e2-sqft" data-i18n="est.sqft">Interior size (sq ft)</label>
+              <input class="x-input" id="e2-sqft" inputmode="numeric" placeholder="1,800" />
+            </div>
+          </div>
+          <div><button class="x-btn x-btn--fill" type="button" id="e2-go" data-i18n="est.go">Get My Estimate</button></div>
+          <div class="x-est__out" id="e2-out" hidden>
+            <p class="x-label" data-i18n="est.result">Estimated value range</p>
+            <p class="x-est__range" id="e2-range"></p>
+            <p class="x-small" data-i18n="est.disclaimer">A ballpark estimate for planning only, not an appraisal. Every home is unique.</p>
+            <p><a class="x-btn" href="#/contact" data-i18n="est.lead">Request My Full Valuation</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- LEASE -->
+  <div class="x-page" data-page="lease">
+    <section class="x-phero">
+      <div class="x-wrap">
+        <p class="x-eyebrow" data-i18n="lease.kicker">Leasing</p>
+        <h1 class="x-h1" data-i18n="lease.title">Every lease gets <em>the full treatment.</em></h1>
+        <p class="x-lead" data-i18n="lease.sub">Don't settle for a brokerage that only focuses on sales. At Shoreline Realty, we understand the importance of finding a place to call home, and that's why we enjoy taking on leases.</p>
+      </div>
+    </section>
+    <section class="x-sec x-sec--cream">
+      <div class="x-wrap">
+        <div class="x-svc">
+          <div>
+            <small>01</small>
+            <h3 class="x-h3" data-i18n="lease.s1t">For Landlords</h3>
+            <p data-i18n="lease.s1d">Targeted marketing strategies and careful tenant placement. Leasing a property gets the same care and attention to detail as if it were being sold.</p>
+          </div>
+          <div>
+            <small>02</small>
+            <h3 class="x-h3" data-i18n="lease.s2t">For Tenants</h3>
+            <p data-i18n="lease.s2d">Using a rental agent saves you money and time, and opens doors to more rental properties across the GTA's hot rental market.</p>
+          </div>
+          <div>
+            <small>03</small>
+            <h3 class="x-h3" data-i18n="lease.s3t">No Pressure</h3>
+            <p data-i18n="lease.s3d">Our reviewers say it plainly: helpful, responsive, and never pressured to make an offer.</p>
+          </div>
+        </div>
+        <div class="x-strip">
+          <div>
+            <h3 class="x-h3" data-i18n="lease.cta_t">Leasing soon?</h3>
+            <p data-i18n="lease.cta_d">Landlord or tenant, start with a conversation.</p>
+          </div>
+          <a class="x-btn x-btn--fill" href="#/contact" data-i18n="lease.cta">Talk To Us</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- STORY -->
+  <div class="x-page" data-page="story">
+    <section class="x-phero">
+      <div class="x-wrap">
+        <p class="x-eyebrow" data-i18n="story.kicker">Our story</p>
+        <h1 class="x-h1" data-i18n="story.title">A family brokerage, <em>then and now.</em></h1>
+        <p class="x-lead" data-i18n="story.sub">What started as a boutique agency in Mississauga now serves families across Ontario, without losing the personal touch it began with.</p>
+      </div>
+    </section>
+    <section class="x-sec x-sec--cream">
+      <div class="x-wrap">
+        <p class="x-lead" data-i18n="story.p1">Founded by Dagmar and John, Shoreline Realty Corp., Brokerage has been servicing the Lakeview community for more than 25 years. What started as a small, independent brokerage is now a boutique-style firm serving the Greater Toronto Area. Marco Pedri, raised in the business since birth, now continues the legacy as a broker himself.</p>
+        <p class="x-lead" data-i18n="story.p2">We build life-long relationships with all our clients, giving us a strong reputation of excellence within the industry. Just like the lighthouse in our logo, we are always here for you.</p>
+        <div class="x-timeline">
+          <div><b>1988</b><p data-i18n="story.t1">Dagmar Prugler is first licensed in real estate.</p></div>
+          <div><b>1999</b><p data-i18n="story.t2">Dagmar opens Shoreline Realty Corp., Brokerage in Mississauga.</p></div>
+          <div><b>2017</b><p data-i18n="story.t3">Marco Pedri joins the family firm as a Real Estate Broker.</p></div>
+          <div><b>2026</b><p data-i18n="story.t4">Marco is quoted by the Canadian Press on the GTA rental market, one of several national media appearances.</p></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- TEAM -->
+  <div class="x-page" data-page="team">
+    <section class="x-phero">
+      <div class="x-wrap">
+        <p class="x-eyebrow" data-i18n="team.kicker">Our team</p>
+        <h1 class="x-h1" data-i18n="team.title">The family behind <em>the firm.</em></h1>
+        <p class="x-lead" data-i18n="team.sub">Three brokers, one standard: carefully curated strategies for every client, and relationships that last well past closing day.</p>
+      </div>
+    </section>
+    <section class="x-sec x-sec--cream">
+      <div class="x-wrap">
+        <div class="x-team">
+          <div class="x-member">
+            <div class="x-member__ph"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="8"/><path d="M10 42c2-9 8-14 14-14s12 5 14 14"/></svg></div>
+            <div class="x-member__body">
+              <p class="x-member__role" data-i18n="team.r1">Broker of Record · Owner</p>
+              <h3 class="x-h3">Dagmar Prugler</h3>
+              <p class="x-small" data-i18n="team.d1">First licensed in 1988 and opened the brokerage in 1999. Speaks English and Slovak.</p>
+            </div>
+          </div>
+          <div class="x-member">
+            <div class="x-member__ph"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="8"/><path d="M10 42c2-9 8-14 14-14s12 5 14 14"/></svg></div>
+            <div class="x-member__body">
+              <p class="x-member__role" data-i18n="team.r2">Broker · Co-founder</p>
+              <h3 class="x-h3">John Pedri</h3>
+              <p class="x-small" data-i18n="team.d2">Co-founded the brokerage with Dagmar. Focus areas include condos and investments.</p>
+            </div>
+          </div>
+          <div class="x-member">
+            <div class="x-member__ph"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="8"/><path d="M10 42c2-9 8-14 14-14s12 5 14 14"/></svg></div>
+            <div class="x-member__body">
+              <p class="x-member__role" data-i18n="team.r3">Broker</p>
+              <h3 class="x-h3">Marco Pedri</h3>
+              <p class="x-small" data-i18n="team.d3">Born in Toronto and raised in Mississauga, immersed in real estate since birth. Joined as a broker in 2017 and continues the family legacy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="x-page" data-page="contact">
+    <section class="x-phero">
+      <div class="x-wrap">
+        <p class="x-eyebrow" data-i18n="contact.kicker">Contact</p>
+        <h1 class="x-h1" data-i18n="contact.title">Come by <em>Port Credit.</em></h1>
+        <p class="x-lead" data-i18n="contact.sub">Call, write, or stop in. We keep an open door.</p>
+      </div>
+    </section>
+    <section class="x-sec x-sec--cream">
+      <div class="x-wrap">
+        <div class="x-grid3" style="grid-template-columns:1fr 1fr; align-items:start">
+          <div>
+            <h2 class="x-h2" data-i18n="contact.h2">Visit or call</h2>
+            <p><b>Shoreline Realty Corp., Brokerage</b><br />92 Lakeshore Road East, Unit #215<br />Mississauga, ON L5G 4S2</p>
+            <p><a href="tel:9058913300">905-891-3300</a></p>
+            <p class="x-small" data-i18n="contact.hours">Monday to Sunday, 9:00 am to 9:00 pm</p>
+          </div>
+          <form id="c-form" class="x-est" style="margin-top:0">
+            <div class="x-field">
+              <label class="x-label" for="c-name" data-i18n="form.name">Name</label>
+              <input class="x-input" id="c-name" autocomplete="name" />
+            </div>
+            <div class="x-field">
+              <label class="x-label" for="c-email" data-i18n="form.email">Email</label>
+              <input class="x-input" id="c-email" type="email" autocomplete="email" />
+            </div>
+            <div class="x-field">
+              <label class="x-label" for="c-phone" data-i18n="form.phone">Phone</label>
+              <input class="x-input" id="c-phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="x-field">
+              <label class="x-label" for="c-msg" data-i18n="form.msg">Message</label>
+              <textarea class="x-textarea" id="c-msg"></textarea>
+            </div>
+            <div><button class="x-btn x-btn--fill" type="submit" data-i18n="form.send">Send Message</button></div>
+            <p class="x-small" id="c-done" hidden data-i18n="form.done">Thank you. We will be in touch shortly.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ADMIN -->
+  <div class="x-page" data-page="admin">
+    <div id="adm-login">
+      <section class="x-sec x-phero">
+        <div class="x-wrap" style="max-width:520px">
+          <p class="x-eyebrow">Staff only</p>
+          <h1 class="x-h1" style="font-size:clamp(2rem,4vw,3rem)">Agent <em>login.</em></h1>
+          <p class="x-lead">Manage listings and valuation leads. This is a concept preview of the staff dashboard.</p>
+          <form id="adm-loginform" class="adm-login-form">
+            <div class="x-field">
+              <label class="x-label" for="adm-email" style="color:rgba(247,244,236,0.7)">Email</label>
+              <input class="x-input" id="adm-email" type="email" autocomplete="username" value="demo@shorelinerealty.ca" />
+            </div>
+            <div class="x-field">
+              <label class="x-label" for="adm-pass" style="color:rgba(247,244,236,0.7)">Password</label>
+              <input class="x-input" id="adm-pass" type="password" autocomplete="current-password" value="shoreline123" />
+            </div>
+            <p class="x-small adm-err" id="adm-err" hidden>Those details did not match. Try the demo login below.</p>
+            <div><button class="x-btn x-btn--fill" type="submit">Sign in</button></div>
+            <p class="x-small adm-dim">Demo login: demo@shorelinerealty.ca / shoreline123</p>
+          </form>
+        </div>
+      </section>
+    </div>
+    <div id="adm-dash" hidden>
+      <div class="adm-shell">
+        <aside class="adm-side">
+          <p class="adm-brand"><b>SHORELINE</b><span>STAFF</span></p>
+          <nav class="adm-nav" aria-label="Dashboard">
+            <button type="button" data-go="overview" class="on">Overview</button>
+            <button type="button" data-go="listings">Listings</button>
+            <button type="button" data-go="leads">Valuation leads</button>
+          </nav>
+          <div class="adm-side__foot">
+            <a href="#/" class="adm-link">View site</a>
+            <button type="button" id="adm-logout" class="adm-link">Log out</button>
+          </div>
+        </aside>
+        <div class="adm-main">
+          <section data-view="overview">
+            <h2 class="x-h2">Good day, <em>team.</em></h2>
+            <p class="x-lead">Here is the site at a glance.</p>
+            <div class="adm-stats">
+              <div class="adm-stat"><b id="adm-stat-active">–</b><span>Active listings</span></div>
+              <div class="adm-stat"><b id="adm-stat-leads">–</b><span>New valuation leads</span></div>
+              <div class="adm-stat"><b id="adm-stat-total">–</b><span>Total listings</span></div>
+              <div class="adm-stat"><b id="adm-stat-vol">–</b><span>Listed volume</span></div>
+            </div>
+            <p class="x-small adm-dim">Tip: add a listing under <b>Listings</b> and it appears on the website instantly. <button type="button" id="adm-reset" class="adm-link">Reset demo data</button></p>
+          </section>
+          <section data-view="listings" hidden>
+            <div class="adm-row">
+              <h2 class="x-h2">Listings</h2>
+              <button class="x-btn x-btn--fill" type="button" id="adm-add">Add listing</button>
+            </div>
+            <div class="adm-form" id="adm-form" hidden>
+              <h3 class="x-h3" id="adm-form-title">Add listing</h3>
+              <input type="hidden" id="adm-f-id" />
+              <div class="adm-grid">
+                <div class="x-field"><label class="x-label" for="adm-f-price">Price (CAD)</label><input class="x-input" id="adm-f-price" inputmode="numeric" placeholder="1289000" /></div>
+                <div class="x-field"><label class="x-label" for="adm-f-status">Status</label><select class="x-select" id="adm-f-status"><option value="sale">For Sale</option><option value="sold">Sold</option></select></div>
+              </div>
+              <div class="x-field"><label class="x-label" for="adm-f-address">Address / title</label><input class="x-input" id="adm-f-address" placeholder="123 Sample Street, Port Credit" /></div>
+              <div class="adm-grid">
+                <div class="x-field"><label class="x-label" for="adm-f-desc">Description</label><input class="x-input" id="adm-f-desc" placeholder="Detached home" /></div>
+                <div class="x-field"><label class="x-label" for="adm-f-hood">Neighbourhood</label><select class="x-select" id="adm-f-hood">
+                  <option value="port-credit">Port Credit</option><option value="lakeview">Lakeview</option><option value="clarkson">Clarkson</option><option value="erindale">Erindale</option><option value="oakville">Oakville</option><option value="etobicoke">Etobicoke</option><option value="downtown">Downtown Toronto</option><option value="hamilton">Hamilton</option>
+                </select></div>
+              </div>
+              <div class="x-field"><span class="x-label">Type</span><div class="adm-checks">
+                <label><input type="checkbox" name="types" value="house" /> House</label>
+                <label><input type="checkbox" name="types" value="condo" /> Condo</label>
+                <label><input type="checkbox" name="types" value="bungalow" /> Bungalow</label>
+              </div></div>
+              <div class="x-field"><label class="x-label" for="adm-f-img">Photo</label><select class="x-select" id="adm-f-img">
+                <option value="listing-home.jpg">listing-home.jpg</option>
+                <option value="listing-condo.jpg">listing-condo.jpg</option>
+                <option value="listing-bungalow.jpg">listing-bungalow.jpg</option>
+                <option value="hero.jpg">hero.jpg</option>
+              </select></div>
+              <div class="adm-row">
+                <button class="x-btn x-btn--fill" type="button" id="adm-save">Save listing</button>
+                <button class="x-btn" type="button" id="adm-cancel">Cancel</button>
+              </div>
+            </div>
+            <div class="adm-tablewrap"><table class="adm-table">
+              <thead><tr><th></th><th>Listing</th><th>Type</th><th>Area</th><th>Status</th><th></th></tr></thead>
+              <tbody id="adm-rows"></tbody>
+            </table></div>
+          </section>
+          <section data-view="leads" hidden>
+            <h2 class="x-h2">Valuation <em>leads.</em></h2>
+            <p class="x-lead">From the instant estimator and the valuation form. Sample data in this preview.</p>
+            <div class="adm-tablewrap"><table class="adm-table">
+              <thead><tr><th>Contact</th><th>Property</th><th>Estimate</th><th>Date</th><th></th></tr></thead>
+              <tbody id="adm-leads"></tbody>
+            </table></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="x-foot">
+  <div class="x-foot__grid">
+    <div>
+      <h2>Shoreline Realty Corp., Brokerage</h2>
+      <p class="x-small">Just like the lighthouse in our logo, we are always here for you.</p>
+      <p class="x-small">92 Lakeshore Road East, Unit #215<br />Mississauga, ON L5G 4S2<br /><a href="tel:9058913300">905-891-3300</a></p>
+    </div>
+    <div>
+      <h2 data-i18n="foot.explore">Explore</h2>
+      <ul>
+        <li><a href="#/buy" data-i18n="nav.buy">Buy</a></li>
+        <li><a href="#/sell" data-i18n="nav.sell">Sell</a></li>
+        <li><a href="#/lease" data-i18n="nav.lease">Lease</a></li>
+        <li><a href="#/story" data-i18n="nav.story">Our Story</a></li>
+        <li><a href="#/team" data-i18n="nav.team">Team</a></li>
+        <li><a href="#/contact" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="#/admin">Agent login</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 data-i18n="foot.follow">Follow</h2>
+      <ul>
+        <li><a href="https://www.facebook.com/ShorelineRealtyCorp" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.instagram.com/shorelinerealtybrokerage" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://linkedin.com/company/shoreline-realty-corp-brokerage" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="x-foot__base">
+    <span>© 2026 Shoreline Realty Corp., Brokerage</span>
+    <span>Developed by <a href="https://teta.dpdns.org" target="_blank" rel="noopener">Teta Digitals</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var d = document;
+  var root = d.documentElement;
+  root.classList.add("x-js");
+
+  /* header solid state */
+  var header = d.getElementById("x-header");
+  var overlay = d.getElementById("x-overlay");
+  var onScroll = function () {
+    var pg = d.body.getAttribute("data-page") || "home";
+    var light = pg !== "home" && pg !== "admin";
+    header.classList.toggle("is-solid", window.scrollY > 40 || overlay.classList.contains("is-open") || light);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  /* mobile overlay */
+  var burger = d.querySelector(".x-burger"), closeBtn = overlay.querySelector(".x-close");
+  function setOverlay(open) {
+    overlay.hidden = !open;
+    requestAnimationFrame(function () { overlay.classList.toggle("is-open", open); });
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    d.body.style.overflow = open ? "hidden" : "";
+    onScroll();
+  }
+  burger.addEventListener("click", function () { setOverlay(true); });
+  closeBtn.addEventListener("click", function () { setOverlay(false); });
+  overlay.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { setOverlay(false); }); });
+
+  /* reveal on scroll */
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  d.querySelectorAll(".x-rv").forEach(function (el) { io.observe(el); });
+
+  /* router */
+  var PAGES = ["home", "buy", "sell", "lease", "story", "team", "contact", "admin"];
+  var TITLES = {
+    home: "Shoreline Realty Corp., Brokerage · Always Here For You",
+    buy: "Buy a home · Shoreline Realty",
+    sell: "Sell your home · Shoreline Realty",
+    lease: "Leasing · Shoreline Realty",
+    story: "Our story · Shoreline Realty",
+    team: "Meet the team · Shoreline Realty",
+    contact: "Contact · Shoreline Realty",
+    admin: "Staff dashboard · Shoreline Realty"
+  };
+  var ANCHORS = { valuation: "valuation", listings: "listings", services: "services", reviews: "reviews", media: "media" };
+  function route() {
+    var h = (location.hash || "").replace(/^#\/?/, "");
+    var page = "home", anchor = null;
+    if (PAGES.indexOf(h) >= 0) { page = h; }
+    else if (h && ANCHORS[h]) { page = "home"; anchor = ANCHORS[h]; }
+    var pages = d.querySelectorAll(".x-page[data-page]");
+    for (var i = 0; i < pages.length; i++) {
+      pages[i].classList.toggle("active", pages[i].getAttribute("data-page") === page);
+    }
+    var links = d.querySelectorAll(".x-menu a");
+    for (var j = 0; j < links.length; j++) {
+      var ah = (links[j].getAttribute("href") || "").replace(/^#\/?/, "");
+      if (ah === page) links[j].setAttribute("aria-current", "page");
+      else links[j].removeAttribute("aria-current");
+    }
+    d.title = TITLES[page];
+    d.body.classList.toggle("is-admin", page === "admin");
+    d.body.setAttribute("data-page", page);
+    window.dispatchEvent(new Event("scroll"));
+    if (window.__shorelineLang) window.__shorelineLang(window.__shorelineLang.current(), true);
+    if (anchor) {
+      setTimeout(function () {
+        var el = d.getElementById(anchor);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 60);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }
+  window.addEventListener("hashchange", route);
+  route();
+})();
+</script>
+<script>
+/* ---- instant valuation estimator ---- */
+(function () {
+  "use strict";
+  var d = document;
+  var RATES = {
+    "port-credit": 850, "lakeview": 800, "clarkson": 780, "erindale": 820,
+    "oakville": 900, "etobicoke": 850, "downtown": 1100, "hamilton": 550
+  };
+  var MULT = { detached: 1.0, semi: 0.85, townhouse: 0.75, condo: 0.7 };
+  function money(n) { return "$" + Math.round(n).toLocaleString("en-CA"); }
+  function wire(prefix) {
+    var hood = d.getElementById(prefix + "-hood"), type = d.getElementById(prefix + "-type"),
+        sqft = d.getElementById(prefix + "-sqft"), go = d.getElementById(prefix + "-go"),
+        out = d.getElementById(prefix + "-out"), range = d.getElementById(prefix + "-range");
+    if (!go) return;
+    go.addEventListener("click", function () {
+      var sq = parseInt((sqft.value || "").replace(/[^0-9]/g, ""), 10);
+      if (!sq || sq < 200 || sq > 20000) { sqft.focus(); return; }
+      var base = (RATES[hood.value] || 800) * (MULT[type.value] || 1) * sq;
+      var lo = Math.round(base * 0.92 / 5000) * 5000;
+      var hi = Math.round(base * 1.08 / 5000) * 5000;
+      range.textContent = money(lo) + " – " + money(hi) + " CAD";
+      out.hidden = false;
+    });
+  }
+  wire("e"); wire("e2");
+})();
+</script>
+<script>
+/* ---- listings filter ---- */
+(function () {
+  "use strict";
+  var d = document;
+  var type = "all";
+  var status = d.getElementById("x-status");
+  var count = d.getElementById("x-count");
+  var empty = d.getElementById("x-empty");
+  function tpl(shown, total) {
+    var lang = (window.__shorelineLang && window.__shorelineLang.current()) || "en";
+    if (lang === "fr") return shown + " sur " + total + " affichées";
+    return shown + " of " + total + " shown";
+  }
+  function apply() {
+    var shown = 0;
+    var cards = Array.prototype.slice.call(d.querySelectorAll(".x-card"));
+    var total = cards.length;
+    var st = status ? status.value : "all";
+    cards.forEach(function (c) {
+      var types = (c.getAttribute("data-types") || "").split(" ");
+      var okType = type === "all" || types.indexOf(type) >= 0;
+      var okStatus = st === "all" || c.getAttribute("data-status") === st;
+      var show = okType && okStatus;
+      c.hidden = !show;
+      if (show) shown++;
+    });
+    if (count) count.textContent = tpl(shown, total);
+    if (empty) empty.hidden = shown !== 0;
+  }
+  window.__shorelineCount = apply;
+  d.querySelectorAll("#x-typebtns .x-typebtn").forEach(function (b) {
+    b.addEventListener("click", function () {
+      d.querySelectorAll("#x-typebtns .x-typebtn").forEach(function (x) { x.classList.remove("on"); });
+      b.classList.add("on");
+      type = b.getAttribute("data-type");
+      apply();
+    });
+  });
+  if (status) status.addEventListener("change", apply);
+})();
+</script>
+<script>
+/* ---- contact form (demo) ---- */
+(function () {
+  "use strict";
+  var d = document;
+  var f = d.getElementById("c-form");
+  if (!f) return;
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    d.getElementById("c-done").hidden = false;
+    f.querySelector("button[type=submit]").disabled = true;
+  });
+})();
+</script>
+<script src="i18n.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
