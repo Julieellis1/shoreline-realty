@@ -1,5 +1,6 @@
 /* Shoreline Realty  - EN/FR language system (concept demo).
-   Dictionary keyed STR[key][lang]; English is the original HTML. */
+   Dictionary keyed STR[key][lang]; English is the original HTML.
+   Handles data-i18n (innerHTML), data-i18n-ph (placeholder) and data-i18n-aria (aria-label). */
 (function () {
   "use strict";
   var d = document;
@@ -18,29 +19,49 @@
     "hero.kicker": { "fr": "Port Credit, Mississauga · Courtage boutique" },
     "hero.title": { "fr": "Toujours là <em>pour vous.</em>" },
     "hero.sub": { "fr": "Comme le phare de notre logo, nous sommes toujours là pour vous. Un courtage familial qui aide les familles à acheter, vendre et louer dans Mississauga et la région du Grand Toronto depuis plus de 25 ans." },
-    "hero.cta1": { "fr": "Quelle est la valeur de ma maison?" },
-    "hero.cta2": { "fr": "Voir les propriétés" },
-    "hero.stat1n": { "fr": "25+ ans" },
     "hero.stat1t": { "fr": "Au service du Grand Toronto" },
     "hero.stat2n": { "fr": "Familial" },
     "hero.stat2t": { "fr": "Courtage boutique" },
     "hero.stat3n": { "fr": "Port Credit" },
     "hero.stat3t": { "fr": "Basé à Mississauga" },
-    "svc.kicker": { "fr": "Ce que nous faisons" },
-    "svc.title": { "fr": "Chaque transaction <em>compte.</em>" },
-    "svc.sub": { "fr": "Que vous soyez investisseur, acheteur d'une première maison ou locataire, nous apportons le même soin à chaque projet." },
-    "svc.c1t": { "fr": "Achat" },
-    "svc.c1d": { "fr": "Une expertise des quartiers, pour ne jamais acheter à côté d'un futur chantier." },
-    "svc.c2t": { "fr": "Vente" },
-    "svc.c2d": { "fr": "Étude de marché, stratégie de prix, inscription MLS et négociation jusqu'à la clôture." },
-    "svc.c3t": { "fr": "Location pour propriétaires" },
-    "svc.c3d": { "fr": "Un marketing ciblé et une sélection soigneuse des locataires, avec le même soin qu'une vente." },
-    "svc.c4t": { "fr": "Location pour locataires" },
-    "svc.c4d": { "fr": "Trouver un chez-soi, ça compte. Nous acceptons les locations que d'autres courtiers refusent." },
-    "svc.c5t": { "fr": "Gestion immobilière" },
-    "svc.c5d": { "fr": "Une gestion stable et professionnelle pour les propriétaires qui veulent protéger leur investissement." },
-    "svc.c6t": { "fr": "Analyse de marché" },
-    "svc.c6d": { "fr": "Des rapports solides sur la performance de votre marché local, envoyés dans votre boîte courriel." },
+    "search.buy": { "fr": "Acheter" },
+    "search.sell": { "fr": "Vendre" },
+    "search.lease": { "fr": "Louer" },
+    "search.go": { "fr": "Rechercher" },
+    "search.placeholder": { "fr": "Ville, quartier ou mot-clé" },
+    "marquee": { "fr": "Le courtage familial de Mississauga <i>•</i> Toujours là pour vous <i>•</i>&nbsp;" },
+    "who.kicker": { "fr": "Qui sommes-nous" },
+    "who.title": { "fr": "Une famille, <em>une promesse.</em>" },
+    "who.p1": { "fr": "Fondé par Dagmar et John, Shoreline Realty Corp., Brokerage est un courtage boutique familial à Port Credit. Depuis plus de 25 ans, nous aidons les familles à acheter, vendre et louer des maisons à Mississauga et dans la région du Grand Toronto." },
+    "who.p2": { "fr": "Nous bâtissons des relations à vie avec tous nos clients, ce qui nous donne une solide réputation d'excellence. Comme le phare de notre logo, nous sommes toujours là pour vous." },
+    "who.cta": { "fr": "Lire notre histoire" },
+    "appr.kicker": { "fr": "Notre approche" },
+    "appr.title": { "fr": "Comment nous <em>travaillons.</em>" },
+    "appr.sub": { "fr": "Quatre promesses simples, une seule norme de service." },
+    "appr.01t": { "fr": "Achetez en confiance" },
+    "appr.01d": { "fr": "Une expertise des quartiers, pour ne jamais acheter à côté d'un futur chantier." },
+    "appr.02t": { "fr": "Vendez à sa juste valeur" },
+    "appr.02d": { "fr": "Étude de marché, stratégie de prix et négociation jusqu'à la clôture." },
+    "appr.03t": { "fr": "Louez en toute simplicité" },
+    "appr.03d": { "fr": "Des locations traitées avec le même soin qu'une vente, pour propriétaires comme locataires." },
+    "appr.04t": { "fr": "Géré avec soin" },
+    "appr.04d": { "fr": "Une gestion stable et professionnelle qui protège votre investissement." },
+    "nb.kicker": { "fr": "Quartiers" },
+    "nb.title": { "fr": "Là où nous <em>travaillons.</em>" },
+    "nb.sub": { "fr": "Les communautés de Mississauga et du Grand Toronto que nous connaissons le mieux." },
+    "nb.pc.t": { "fr": "Port Credit" },
+    "nb.pc.d": { "fr": "Notre port d'attache au 92 Lakeshore Road East, un village au bord du lac au cœur de Mississauga." },
+    "nb.lv.t": { "fr": "Lakeview" },
+    "nb.lv.d": { "fr": "Une communauté que nous servons depuis plus de 25 ans, avec des rapports de marché réguliers." },
+    "nb.cl.t": { "fr": "Clarkson" },
+    "nb.cl.d": { "fr": "L'un des quartiers de Mississauga que notre équipe connaît rue par rue." },
+    "t.kicker": { "fr": "Témoignages" },
+    "t.title": { "fr": "Ce que nos clients <em>disent.</em>" },
+    "t.sub": { "fr": "Des avis Google authentiques de vrais clients." },
+    "t.prev": { "fr": "Précédent" },
+    "t.next": { "fr": "Suivant" },
+    "cta.title": { "fr": "Vous pensez acheter, vendre ou louer? <em>Parlons-nous.</em>" },
+    "cta.sub": { "fr": "Appelez le 905-891-3300, ou passez au 92 Lakeshore Road East, bureau 215, Mississauga." },
     "est.kicker": { "fr": "Évaluation gratuite" },
     "est.title": { "fr": "Quelle est la valeur <em>de votre maison?</em>" },
     "est.sub": { "fr": "Obtenez une estimation instantanée pour votre maison du Grand Toronto. Demandez ensuite une évaluation complète, sans pression, de notre équipe." },
@@ -56,7 +77,7 @@
     "est.t_town": { "fr": "Maison en rangée" },
     "est.t_condo": { "fr": "Condo" },
     "list.kicker": { "fr": "Propriétés actuelles" },
-    "list.title": { "fr": "Sur le marché <em>maintenant.</em>" },
+    "list.title": { "fr": "Propriétés <em>en vedette.</em>" },
     "list.sample": { "fr": "Propriétés d'exemple pour démonstration." },
     "list.type": { "fr": "Type de propriété" },
     "list.all": { "fr": "Tout" },
@@ -67,14 +88,9 @@
     "list.forsale": { "fr": "À vendre" },
     "list.sold": { "fr": "Vendu" },
     "list.empty": { "fr": "Aucune propriété ne correspond à ces filtres. Élargissez votre recherche." },
-    "rev.kicker": { "fr": "Paroles de clients" },
-    "rev.title": { "fr": "Dans leurs <em>mots.</em>" },
     "media.kicker": { "fr": "Dans les médias" },
     "media.title": { "fr": "Cités là où <em>ça compte.</em>" },
     "media.sub": { "fr": "Marco Pedri est régulièrement invité à commenter le marché du Grand Toronto par des médias nationaux." },
-    "strip.title": { "fr": "Parlez à une vraie personne." },
-    "strip.sub": { "fr": "Appelez le 905-891-3300, ou passez au 92 Lakeshore Road East, Port Credit." },
-    "strip.cta": { "fr": "Nous joindre" },
     "buy.kicker": { "fr": "Achat" },
     "buy.title": { "fr": "Achetez avec <em>des yeux locaux.</em>" },
     "buy.sub": { "fr": "Imaginez acheter une propriété qui semble parfaite, puis découvrir que dans quelques années, vous serez au milieu d'un chantier. Notre expertise des quartiers vous protège de ce genre de surprise." },
@@ -152,22 +168,53 @@
     return "en";
   }
 
+  function applyHtml(el, key, lang) {
+    var entry = STR[key];
+    if (lang === "en") {
+      var orig = el.getAttribute("data-i18n-en");
+      if (orig !== null) el.innerHTML = orig;
+    } else if (entry && entry[lang] !== undefined) {
+      if (el.getAttribute("data-i18n-en") === null) {
+        el.setAttribute("data-i18n-en", el.innerHTML);
+      }
+      el.innerHTML = entry[lang];
+    }
+  }
+
+  function applyPh(el, key, lang) {
+    var entry = STR[key];
+    if (lang === "en") {
+      var orig = el.getAttribute("data-i18n-ph-en");
+      if (orig !== null) el.setAttribute("placeholder", orig);
+    } else if (entry && entry[lang] !== undefined) {
+      if (el.getAttribute("data-i18n-ph-en") === null) {
+        el.setAttribute("data-i18n-ph-en", el.getAttribute("placeholder") || "");
+      }
+      el.setAttribute("placeholder", entry[lang]);
+    }
+  }
+
+  function applyAria(el, key, lang) {
+    var entry = STR[key];
+    if (lang === "en") {
+      var orig = el.getAttribute("data-i18n-aria-en");
+      if (orig !== null) el.setAttribute("aria-label", orig);
+    } else if (entry && entry[lang] !== undefined) {
+      if (el.getAttribute("data-i18n-aria-en") === null) {
+        el.setAttribute("data-i18n-aria-en", el.getAttribute("aria-label") || "");
+      }
+      el.setAttribute("aria-label", entry[lang]);
+    }
+  }
+
   function apply(lang, silent) {
     d.documentElement.setAttribute("lang", lang === "fr" ? "fr-CA" : "en-CA");
     var els = d.querySelectorAll("[data-i18n]");
-    for (var i = 0; i < els.length; i++) {
-      var key = els[i].getAttribute("data-i18n");
-      var entry = STR[key];
-      if (lang === "en") {
-        var orig = els[i].getAttribute("data-i18n-en");
-        if (orig !== null) els[i].innerHTML = orig;
-      } else if (entry && entry[lang] !== undefined) {
-        if (els[i].getAttribute("data-i18n-en") === null) {
-          els[i].setAttribute("data-i18n-en", els[i].innerHTML);
-        }
-        els[i].innerHTML = entry[lang];
-      }
-    }
+    for (var i = 0; i < els.length; i++) applyHtml(els[i], els[i].getAttribute("data-i18n"), lang);
+    var phs = d.querySelectorAll("[data-i18n-ph]");
+    for (var k = 0; k < phs.length; k++) applyPh(phs[k], phs[k].getAttribute("data-i18n-ph"), lang);
+    var ars = d.querySelectorAll("[data-i18n-aria]");
+    for (var m = 0; m < ars.length; m++) applyAria(ars[m], ars[m].getAttribute("data-i18n-aria"), lang);
     var sels = d.querySelectorAll(".x-langsel");
     for (var j = 0; j < sels.length; j++) { sels[j].value = lang; }
     if (!silent) {

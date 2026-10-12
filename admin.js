@@ -7,13 +7,13 @@
   var SEED_LISTINGS = [
     { id: "l1", price: 1289000, address: "Sample: 12 Lighthouse Lane, Port Credit", desc: "Detached home",
       hood: "port-credit", hoodLabel: "Port Credit", types: ["house"], status: "sale",
-      img: "listing-home.jpg", sample: true },
+      img: "listing-home.jpg", sample: true, beds: 4, baths: 3, sqft: 2100 },
     { id: "l2", price: 749000, address: "Sample: 88 Lakeview Ave, Unit 1204", desc: "Condo",
       hood: "lakeview", hoodLabel: "Lakeview", types: ["condo"], status: "sale",
-      img: "listing-condo.jpg", sample: true },
+      img: "listing-condo.jpg", sample: true, beds: 2, baths: 2, sqft: 980 },
     { id: "l3", price: 989000, address: "Sample: 45 Clarkson Rd", desc: "Bungalow",
       hood: "clarkson", hoodLabel: "Clarkson", types: ["bungalow"], status: "sold",
-      img: "listing-bungalow.jpg", sample: true }
+      img: "listing-bungalow.jpg", sample: true, beds: 3, baths: 2, sqft: 1450 }
   ];
 
   var SEED_LEADS = [
@@ -52,17 +52,29 @@
   }
 
   /* ---------- public grid ---------- */
+  var SVG_BED = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6" stroke-width="1.8" stroke-linecap="round"/><path d="M3 18h18M5 10V6h14v4" stroke-width="1.8" stroke-linecap="round"/></svg>';
+  var SVG_BATH = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-2z" stroke-width="1.8" stroke-linecap="round"/><path d="M6 19l-1 2M18 19l1 2M8 12V5a2 2 0 0 1 4 0" stroke-width="1.8" stroke-linecap="round"/></svg>';
+  var SVG_AREA = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16v16H4z" stroke-width="1.8" stroke-linejoin="round"/><path d="M4 9h5V4M20 15h-5v5" stroke-width="1.8" stroke-linecap="round"/></svg>';
   function cardHTML(l) {
     var badge = l.status === "sale"
       ? '<span class="x-badge x-badge--sale">For Sale</span>'
       : '<span class="x-badge">Sold</span>';
     var sample = l.sample ? '<span class="x-badge x-badge--sample">Sample listing</span>' : "";
+    var meta = "";
+    if (l.beds || l.baths || l.sqft) {
+      meta = '<div class="x-card__meta">';
+      if (l.beds) meta += "<span>" + SVG_BED + esc(l.beds) + " bd</span>";
+      if (l.baths) meta += "<span>" + SVG_BATH + esc(l.baths) + " ba</span>";
+      if (l.sqft) meta += "<span>" + SVG_AREA + esc(Number(l.sqft).toLocaleString("en-CA")) + " sqft</span>";
+      meta += "</div>";
+    }
     return '<article class="x-card is-in" data-types="' + esc(l.types.join(" ")) + '" data-status="' + esc(l.status) + '">' +
       '<figure class="x-card__media"><img src="' + esc(l.img) + '" alt="' + esc(l.desc + " at " + l.address) + '" loading="lazy" />' + badge + sample + "</figure>" +
       '<div class="x-card__body">' +
       '<p class="x-card__price">' + fmt(l.price) + "</p>" +
       "<h3>" + esc(l.address) + "</h3>" +
-      '<p class="x-card__meta"><span>' + esc(l.desc) + "</span><span>" + esc(l.hoodLabel) + "</span></p>" +
+      meta +
+      '<span class="x-card__hood">' + esc(l.hoodLabel) + "</span>" +
       "</div></article>";
   }
 
@@ -141,6 +153,9 @@
     d.getElementById("adm-f-hood").value = l ? l.hood : "port-credit";
     d.getElementById("adm-f-status").value = l ? l.status : "sale";
     d.getElementById("adm-f-img").value = l ? l.img : IMAGES[0];
+    d.getElementById("adm-f-beds").value = l && l.beds ? l.beds : "";
+    d.getElementById("adm-f-baths").value = l && l.baths ? l.baths : "";
+    d.getElementById("adm-f-sqft").value = l && l.sqft ? l.sqft : "";
     d.querySelectorAll("#adm-form input[name=types]").forEach(function (cb) {
       cb.checked = l ? l.types.indexOf(cb.value) >= 0 : false;
     });
@@ -233,7 +248,10 @@
         types: types.length ? types : ["house"],
         status: d.getElementById("adm-f-status").value,
         img: d.getElementById("adm-f-img").value,
-        sample: false
+        sample: false,
+        beds: parseInt(d.getElementById("adm-f-beds").value, 10) || 0,
+        baths: parseInt(d.getElementById("adm-f-baths").value, 10) || 0,
+        sqft: parseInt((d.getElementById("adm-f-sqft").value || "").replace(/[^0-9]/g, ""), 10) || 0
       };
       if (!l.address || !l.price) { alert("Address and price are required."); return; }
       var ls = store.listings;
